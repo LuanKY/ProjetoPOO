@@ -5,6 +5,11 @@
  */
 package Interface;
 
+import RegraDeNegocios.Cliente;
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 /**
  *
  * @author luan-
@@ -39,7 +44,7 @@ public class Interface extends javax.swing.JFrame {
         jMenu2 = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
         jMenuItem2 = new javax.swing.JMenuItem();
-        jMenuItem3 = new javax.swing.JMenuItem();
+        jMenuListaCadastrados = new javax.swing.JMenuItem();
         jMenuItem4 = new javax.swing.JMenuItem();
         jMenu4 = new javax.swing.JMenu();
         jMenuItem12 = new javax.swing.JMenuItem();
@@ -82,6 +87,11 @@ public class Interface extends javax.swing.JFrame {
 
         jMenu2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/user.png"))); // NOI18N
         jMenu2.setText("Clientes");
+        jMenu2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenu2ActionPerformed(evt);
+            }
+        });
 
         jMenuItem1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/user_add.png"))); // NOI18N
         jMenuItem1.setText("Cadastrar cliente");
@@ -101,9 +111,14 @@ public class Interface extends javax.swing.JFrame {
         });
         jMenu2.add(jMenuItem2);
 
-        jMenuItem3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/vcard_add.png"))); // NOI18N
-        jMenuItem3.setText("Clientes cadastrados");
-        jMenu2.add(jMenuItem3);
+        jMenuListaCadastrados.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/vcard_add.png"))); // NOI18N
+        jMenuListaCadastrados.setText("Clientes cadastrados");
+        jMenuListaCadastrados.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuListaCadastradosActionPerformed(evt);
+            }
+        });
+        jMenu2.add(jMenuListaCadastrados);
 
         jMenuItem4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/vcard_delete.png"))); // NOI18N
         jMenuItem4.setText("Clientes excluidos");
@@ -160,7 +175,7 @@ public class Interface extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
-        // TODO add your handling code here:
+        new CadastroCliente().setVisible(true);    
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
@@ -178,6 +193,15 @@ public class Interface extends javax.swing.JFrame {
     private void jMenuItem12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem12ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jMenuItem12ActionPerformed
+
+    private void jMenu2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenu2ActionPerformed
+
+    private void jMenuListaCadastradosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuListaCadastradosActionPerformed
+        Cliente cliente = new Cliente();
+        cliente.ListarClienteCadastrados();
+    }//GEN-LAST:event_jMenuListaCadastradosActionPerformed
 
     /**
      * @param args the command line arguments
@@ -227,12 +251,12 @@ public class Interface extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem12;
     private javax.swing.JMenuItem jMenuItem13;
     private javax.swing.JMenuItem jMenuItem2;
-    private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JMenuItem jMenuItem4;
     private javax.swing.JMenuItem jMenuItem5;
     private javax.swing.JMenuItem jMenuItem6;
     private javax.swing.JMenuItem jMenuItem7;
     private javax.swing.JMenuItem jMenuItem8;
     private javax.swing.JMenuItem jMenuItem9;
+    private javax.swing.JMenuItem jMenuListaCadastrados;
     // End of variables declaration//GEN-END:variables
 }
