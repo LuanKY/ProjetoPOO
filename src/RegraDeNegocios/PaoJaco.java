@@ -1,7 +1,6 @@
 package RegraDeNegocios;
 public class PaoJaco extends Pao{
-    @Override
-    public void VenderPao() {
-        
+    public PaoJaco(int quantidade) {
+        super(quantidade);
     }
 }
