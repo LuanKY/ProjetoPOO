@@ -1,4 +1,5 @@
 package RegraDeNegocios;
 public interface MetodosBebida {
-    public String VenderBebida(int quantidade, char tamanho, float pago);
+    public String VenderBebida(int quantidade, float pago);
+    public String VenderBebida(float valor);
 }

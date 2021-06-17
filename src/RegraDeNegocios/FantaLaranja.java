@@ -1,12 +1,12 @@
 package RegraDeNegocios;
 public class FantaLaranja extends Bebida{
-    public FantaLaranja(int quantidade, char tamanho){
-        super(quantidade,tamanho);
+    public FantaLaranja(float quantidade) {
+        super(quantidade);
     }
     
     @Override
-    public String VenderBebida(int quantidade, char tamanho, float pago) {
-        this.setPreco(6.0f);
+    public String VenderBebida(int quantidade, float pago) {
+        this.setPreco(2.5f);
         if (this.getQuantidade() >= quantidade) {
             if (pago > (quantidade*this.getPreco())) {
                 float troco = pago-(quantidade*this.getPreco());
@@ -18,7 +18,7 @@ public class FantaLaranja extends Bebida{
                 this.setQuantidade(this.getQuantidade()-quantidade);
                 this.setRenda(this.getRenda()+pago);
                 return "A Compra foi realizada com sucesso";
-            }  else {
+            } else {
                 this.setRenda(this.getRenda()+pago);
                 this.setFalta(pago - (quantidade*this.getPreco()));
                 return "A Compra não pode ser realizada, faltou R$" + (this.getFalta())*-1;

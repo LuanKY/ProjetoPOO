@@ -1,22 +1,54 @@
 package RegraDeNegocios;
 public abstract class Bebida implements MetodosBebida{
-    private char tamanho;
-    private int quantidade;
+    private float quantidade;
     private float preco;
     private float renda;
     private float falta;
-    
-    
-    public Bebida(int quantidade, char tamanho) {
+    private float ml;
+    private int copos;
+
+    public Bebida(float quantidade) {
         this.quantidade = quantidade;
-        this.tamanho = tamanho;
+    }
+
+    public float getMl() {
+        return ml;
     }
     
-    public int getQuantidade() {
+    public int getCopos() {
+        return copos;
+    }
+
+    public void setCopos(int copos) {
+        this.copos = copos;
+    }
+
+    public void setMl(float ml) {
+        this.ml = ml;
+    }
+
+    public float getFalta() {
+        return falta;
+    }
+
+    public void setFalta(float falta) {
+        this.falta = falta;
+    }
+
+    public float getRenda() {
+        return renda;
+    }
+
+    public void setRenda(float renda) {
+        this.renda = renda;
+    }
+
+
+    public float getQuantidade() {
         return quantidade;
     }
 
-    public void setQuantidade(int quantidade) {
+    public void setQuantidade(float quantidade) {
         this.quantidade = quantidade;
     }
 
@@ -28,31 +60,22 @@ public abstract class Bebida implements MetodosBebida{
         this.preco = preco;
     }
     
-    public char getTamanho() {
-        return tamanho;
-    }
-
-    public void setTamanho(char tamanho) {
-        this.tamanho = tamanho;
-    }
-    
-    public float getRenda() {
-        return renda;
-    }
-
-    public float getFalta() {
-        return falta;
-    }
-
-    public void setRenda(float renda) {
-        this.renda = renda;
-    }
-
-    public void setFalta(float falta) {
-        this.falta = falta;
-    }
+    @Override
+    public abstract String VenderBebida(int quantidade, float pago);
     
     @Override
-    public abstract String VenderBebida(int quantidade, char tamanho, float pago);
-    
+    public String VenderBebida(float valor) {
+        if ((valor)*-1 == this.getFalta()) {
+            this.setQuantidade(this.getQuantidade()-this.ml*this.getCopos());
+            this.setRenda(this.getRenda()+valor);
+            this.setFalta(this.getFalta()+valor);
+            return "A Compra foi realizada com sucesso";
+        } else {
+            float troco = valor+this.getFalta();
+            this.setQuantidade(this.getQuantidade()-this.ml*this.getCopos());
+            this.setRenda(this.getRenda()+(valor-troco));
+            this.setFalta(this.getFalta()-(valor-troco));
+            return "A Compra foi realizada com sucesso, seu troco é de " + troco;
+        }
+    }
 }

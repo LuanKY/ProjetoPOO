@@ -14,8 +14,7 @@ public class PaoCocada extends Pao{
         this.goiabada = goiabada;
     }
     
-    @Override
-    public String VenderPao(int quantidade, float pago){
+    public String VenderPao(int quantidade, float pago, boolean goiabada) {
         if (goiabada == true) {
             this.setPreco(0.6f);
         } else {
@@ -41,18 +40,9 @@ public class PaoCocada extends Pao{
             return "A Compra não pode ser realizada, pois só há " + this.getQuantidade() + " Pães no estoque";
         }
     }
-    
+    // METODO QUE EU FALEI
     @Override
-    public String VenderPao(float valor) {
-        if ((valor)*-1 == this.getFalta()) {
-            this.setRenda(this.getRenda()+valor);
-            this.setFalta(this.getFalta()+valor);
-            return "A Compra foi realizada com sucesso";
-        } else {
-            float troco = valor+this.getFalta();
-            this.setRenda(this.getRenda()+(valor-troco));
-            this.setFalta(this.getFalta()-(valor-troco));
-            return "A Compra foi realizada com sucesso, seu troco é de " + troco;
-        }
+    public String VenderPao(int quantidade, float pago) {
+        return "";
     }
 }

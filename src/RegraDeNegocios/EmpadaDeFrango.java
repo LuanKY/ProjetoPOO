@@ -1,11 +1,12 @@
 package RegraDeNegocios;
-public class PaoJaco extends Pao{
-    public PaoJaco(int quantidade) {
+public class EmpadaDeFrango extends Salgado{
+    public EmpadaDeFrango(int quantidade) {
         super(quantidade);
     }
+    
     @Override
-    public String VenderPao(int quantidade, float pago) {
-        this.setPreco(0.25f);
+    public String VenderSalgado(int quantidade, float pago) {
+        this.setPreco(3);
         if (this.getQuantidade() >= quantidade) {
             if (pago > (quantidade*this.getPreco())) {
                 float troco = pago-(quantidade*this.getPreco());
@@ -23,7 +24,7 @@ public class PaoJaco extends Pao{
                 return "A Compra não pode ser realizada, faltou R$" + (this.getFalta())*-1;
             }
         } else {
-            return "A Compra não pode ser realizada, pois só há " + this.getQuantidade() + " Pao Jaco no estoque";
+            return "A Compra não pode ser realizada, pois só há " + this.getQuantidade() + " Empada De Frango no estoque";
         }
     }
 }

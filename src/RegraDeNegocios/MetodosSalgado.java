@@ -1,4 +1,5 @@
 package RegraDeNegocios;
 public interface MetodosSalgado {
-    public void VenderSalgado();
+    public String VenderSalgado(int quantidade, float pago);
+    public String VenderSalgado(float valor);
 }
