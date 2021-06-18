@@ -1,5 +1,8 @@
 package Interface;
 
+import RegraDeNegocios.Cliente;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author adria
@@ -29,7 +32,7 @@ public class CadastroCliente extends javax.swing.JFrame {
         jFormattedTextField1 = new javax.swing.JFormattedTextField();
         jButtonCadastrar = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Dados pessoais"));
 
@@ -44,6 +47,11 @@ public class CadastroCliente extends javax.swing.JFrame {
         }
 
         jButtonCadastrar.setText("Cadastrar");
+        jButtonCadastrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonCadastrarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -90,7 +98,20 @@ public class CadastroCliente extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButtonCadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCadastrarActionPerformed
+        Cliente cliente = new Cliente();
+        
+        cliente.setNome(jTextField1.getText());
+        cliente.setCpf(jFormattedTextField1.getText());
+        
+        JOptionPane.showMessageDialog(null, cliente.CadastrarCliente());
+        
+        jTextField1.setText("");
+        jFormattedTextField1.setText("");
+    }//GEN-LAST:event_jButtonCadastrarActionPerformed
 
     /**
      * @param args the command line arguments
