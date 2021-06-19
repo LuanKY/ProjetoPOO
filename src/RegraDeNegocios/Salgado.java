@@ -1,5 +1,6 @@
 package RegraDeNegocios;
 public abstract class Salgado implements MetodosSalgado{
+    private String classe;
     private int quantidade;
     private float preco;
     private float renda;
@@ -9,7 +10,15 @@ public abstract class Salgado implements MetodosSalgado{
     public Salgado(int quantidade) {
         this.quantidade = quantidade;
     }
+    
+    public String getClasse() {
+        return classe;
+    }
 
+    public void setClasse(String classe) {
+        this.classe = classe;
+    }
+    
     public float getFalta() {
         return falta;
     }

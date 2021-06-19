@@ -14,9 +14,11 @@ public class SucoDeGoiaba extends Bebida{
         this.tamanho = tamanho;
     }
     
-    public String VenderBebida(int copos, float pago, char tamanho) { //Quantidade em Litros e não em latas
+    @Override
+    public String VenderBebida(int copos, float pago) { //Quantidade em Litros e não em latas
+        // Antes da execução do metodo, deve ser setado o tamanho
         this.setCopos(copos);
-        String tam = String.valueOf(tamanho).toUpperCase();
+        String tam = String.valueOf(this.getTamanho()).toUpperCase();
         switch (tam) {
             case "P":
                 this.setPreco(2);
@@ -52,10 +54,5 @@ public class SucoDeGoiaba extends Bebida{
         } else {
             return "A Compra não pode ser realizada, pois só há " + this.getQuantidade() + " Bebidas no estoque";
         }
-    }
-    // METODO QUE EU FALEI
-    @Override
-    public String VenderBebida(int quantidade, float pago) {
-        return "";
     }
 }

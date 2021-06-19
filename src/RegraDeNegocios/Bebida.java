@@ -1,5 +1,6 @@
 package RegraDeNegocios;
 public abstract class Bebida implements MetodosBebida{
+    private String classe;
     private float quantidade;
     private float preco;
     private float renda;
@@ -9,6 +10,14 @@ public abstract class Bebida implements MetodosBebida{
 
     public Bebida(float quantidade) {
         this.quantidade = quantidade;
+    }
+
+    public String getClasse() {
+        return classe;
+    }
+
+    public void setClasse(String classe) {
+        this.classe = classe;
     }
 
     public float getMl() {

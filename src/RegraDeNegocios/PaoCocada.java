@@ -14,7 +14,9 @@ public class PaoCocada extends Pao{
         this.goiabada = goiabada;
     }
     
-    public String VenderPao(int quantidade, float pago, boolean goiabada) {
+    @Override
+    public String VenderPao(int quantidade, float pago) {
+        // Antes da execução do metodo, deve ser setado se vai ter goiabada ou não
         if (goiabada == true) {
             this.setPreco(0.6f);
         } else {
@@ -39,10 +41,5 @@ public class PaoCocada extends Pao{
         } else {
             return "A Compra não pode ser realizada, pois só há " + this.getQuantidade() + " Pães no estoque";
         }
-    }
-    // METODO QUE EU FALEI
-    @Override
-    public String VenderPao(int quantidade, float pago) {
-        return "";
     }
 }
