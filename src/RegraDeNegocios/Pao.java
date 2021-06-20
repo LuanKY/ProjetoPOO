@@ -1,5 +1,6 @@
 package RegraDeNegocios;
 public abstract class Pao implements MetodosPao{
+    private boolean goiabada;
     private String classe;
     private int quantidade;
     private float preco;
@@ -9,6 +10,14 @@ public abstract class Pao implements MetodosPao{
 
     public Pao(int quantidade) {
         this.quantidade = quantidade;
+    }
+    
+    public boolean getGoiabada() {
+        return goiabada;
+    }
+
+    public void setGoiabada(boolean goiabada) {
+        this.goiabada = goiabada;
     }
     
     public String getClasse() {

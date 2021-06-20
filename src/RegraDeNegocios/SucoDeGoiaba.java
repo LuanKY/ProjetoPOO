@@ -1,39 +1,23 @@
 package RegraDeNegocios;
 public class SucoDeGoiaba extends Bebida{
-    private char tamanho;
 
     public SucoDeGoiaba(float quantidade) {
         super(quantidade);
-    }
-    
-    public char getTamanho() {
-        return tamanho;
-    }
-
-    public void setTamanho(char tamanho) {
-        this.tamanho = tamanho;
     }
     
     @Override
     public String VenderBebida(int copos, float pago) { //Quantidade em Litros e não em latas
         // Antes da execução do metodo, deve ser setado o tamanho
         this.setCopos(copos);
-        String tam = String.valueOf(this.getTamanho()).toUpperCase();
-        switch (tam) {
-            case "P":
-                this.setPreco(2);
-                this.setMl(0.200f);
-                break;
-            case "M":
-                this.setPreco(2.5f);
-                this.setMl(0.300f);
-                break;
-            case "G":
-                this.setPreco(3.5f);
-                this.setMl(0.500f);
-                break;
-            default:
-                return "Só temos os tamanhos P, M e G";
+        float tam = this.getMl();
+        if (tam == 0.2f) {
+            this.setPreco(2);
+        } else if (tam == 0.3f) {
+            this.setPreco(2.5f);
+        } else if (tam == 0.5f) {
+            this.setPreco(3.5f);
+        } else {
+            return "Só temos os tamanhos P, M e G";
         }
         if (this.getQuantidade() >= this.getMl()*copos) {
             if (pago > (copos*this.getPreco())) {

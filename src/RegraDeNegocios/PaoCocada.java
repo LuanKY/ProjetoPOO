@@ -1,22 +1,14 @@
 package RegraDeNegocios;
 public class PaoCocada extends Pao{
-    private boolean goiabada;
 
     public PaoCocada(int quantidade) {
         super(quantidade);
     }
 
-    public boolean getGoiabada() {
-        return goiabada;
-    }
-
-    public void setGoiabada(boolean goiabada) {
-        this.goiabada = goiabada;
-    }
-    
     @Override
     public String VenderPao(int quantidade, float pago) {
         // Antes da execução do metodo, deve ser setado se vai ter goiabada ou não
+        boolean goiabada = this.getGoiabada();
         if (goiabada == true) {
             this.setPreco(0.6f);
         } else {

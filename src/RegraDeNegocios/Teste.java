@@ -20,18 +20,19 @@ public class Teste {
         System.out.println(rendatotal); */
       
         /* Teste BEBIDA
-        SucoDeLaranja b = new SucoDeLaranja(10);
-        b.setTamanho('g');
+        SucoDeGoiaba b = new SucoDeGoiaba(10);
+        b.setMl(0.5f);
         System.out.println(b.VenderBebida(2, 7));
-        b.setTamanho('p');
+        b.setMl(0.2f);
         System.out.println(b.VenderBebida(2, 5));
-        b.setTamanho('M');
+        b.setMl(0.3f);
         System.out.println(b.VenderBebida(2, 6));
         System.out.println(b.getQuantidade()); */
         
         Estoque e = new Estoque();
-        System.out.println(e.AdicionarProdutoAoEstoque("SPRITE", 10));
-        System.out.println(e.getBebida().VenderBebida(2, 7));
-        System.out.println(e.getBebida());
+        System.out.println(e.AdicionarProdutoAoEstoque("SUCODELARANJA", 10));
+        e.CadastrarVenda("SUCODELARANJA", 2, 7, 0.5f);
+        System.out.println(e.getBebida().getQuantidade());
+        System.out.println(e.getCaixa());
     }
 }
