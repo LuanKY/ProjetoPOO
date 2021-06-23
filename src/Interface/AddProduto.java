@@ -39,6 +39,11 @@ public class AddProduto extends javax.swing.JFrame {
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Adicionar produto"));
 
         jButtonPao.setText("Pao");
+        jButtonPao.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonPaoActionPerformed(evt);
+            }
+        });
 
         jButtonBebida.setText("Bebida");
 
@@ -96,6 +101,10 @@ public class AddProduto extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButtonPaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonPaoActionPerformed
+        new AddPao().setVisible(true);
+    }//GEN-LAST:event_jButtonPaoActionPerformed
 
     /**
      * @param args the command line arguments

@@ -1,4 +1,11 @@
 package RegraDeNegocios;
+
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 public class Estoque implements MetodosEstoque{
     private float caixa;
     private Bebida bebida;
@@ -116,7 +123,23 @@ public class Estoque implements MetodosEstoque{
                 this.salgado = new PastelDeQueijo(quantidade);
                 break;
         }
-        return quantidade + " Unidade de " + classe + " foram adicionado ao Estoque";
+        
+        try {        
+            FileWriter arq = new FileWriter("estoque.dat",true);
+            PrintWriter pArq = new PrintWriter(arq);
+            
+            pArq.println("Nome: " + classe);
+            pArq.println("Quantidade: " + quantidade);
+            
+            pArq.flush();
+            pArq.close();
+            arq.close();
+            
+        } catch (IOException ex) {
+            Logger.getLogger(Cliente.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        return quantidade + " unidade(s) de " + classe + " foram adicionado(s) ao Estoque";
     }
     
     @Override
