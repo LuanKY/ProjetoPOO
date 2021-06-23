@@ -35,7 +35,7 @@ public class Interface extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
-        jMenuItem6 = new javax.swing.JMenuItem();
+        jMenuItemCadastrarP = new javax.swing.JMenuItem();
         jMenuItem7 = new javax.swing.JMenuItem();
         jMenuItem8 = new javax.swing.JMenuItem();
         jMenuItem9 = new javax.swing.JMenuItem();
@@ -60,8 +60,13 @@ public class Interface extends javax.swing.JFrame {
         jMenu1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/box.png"))); // NOI18N
         jMenu1.setText("Estoque");
 
-        jMenuItem6.setText("Cadastrar produto");
-        jMenu1.add(jMenuItem6);
+        jMenuItemCadastrarP.setText("Cadastrar produto");
+        jMenuItemCadastrarP.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemCadastrarPActionPerformed(evt);
+            }
+        });
+        jMenu1.add(jMenuItemCadastrarP);
 
         jMenuItem7.setText("Excluir produto");
         jMenu1.add(jMenuItem7);
@@ -78,6 +83,11 @@ public class Interface extends javax.swing.JFrame {
         jMenu1.add(jMenuItem9);
 
         jMenuItem10.setText("Adicionar produto");
+        jMenuItem10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem10ActionPerformed(evt);
+            }
+        });
         jMenu1.add(jMenuItem10);
 
         jMenuItem11.setText("Produtos fora do estoque");
@@ -203,6 +213,14 @@ public class Interface extends javax.swing.JFrame {
         cliente.ListarClienteCadastrados();
     }//GEN-LAST:event_jMenuListaCadastradosActionPerformed
 
+    private void jMenuItemCadastrarPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemCadastrarPActionPerformed
+        
+    }//GEN-LAST:event_jMenuItemCadastrarPActionPerformed
+
+    private void jMenuItem10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem10ActionPerformed
+        new AddProduto().setVisible(true);
+    }//GEN-LAST:event_jMenuItem10ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -253,10 +271,10 @@ public class Interface extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem jMenuItem4;
     private javax.swing.JMenuItem jMenuItem5;
-    private javax.swing.JMenuItem jMenuItem6;
     private javax.swing.JMenuItem jMenuItem7;
     private javax.swing.JMenuItem jMenuItem8;
     private javax.swing.JMenuItem jMenuItem9;
+    private javax.swing.JMenuItem jMenuItemCadastrarP;
     private javax.swing.JMenuItem jMenuListaCadastrados;
     // End of variables declaration//GEN-END:variables
 }
