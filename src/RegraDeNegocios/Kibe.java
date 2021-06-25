@@ -2,6 +2,7 @@ package RegraDeNegocios;
 public class Kibe extends Salgado{
     public Kibe(int quantidade) {
         super(quantidade);
+        this.setClasse("KIBE");
     }
     
     @Override

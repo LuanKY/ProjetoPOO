@@ -3,6 +3,8 @@ package RegraDeNegocios;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -12,6 +14,10 @@ public class Estoque implements MetodosEstoque{
     private Pao pao;
     private Doce doce;
     private Salgado salgado;
+    public List<Pao> paocad = new ArrayList<>();
+    public List<Bebida> bebidacad = new ArrayList<>();
+    public List<Salgado> salgadocad = new ArrayList<>();
+    public List<Doce> docecad = new ArrayList<>();
 
     public Bebida getBebida() {
         return bebida;
@@ -250,7 +256,22 @@ public class Estoque implements MetodosEstoque{
     }
     
     @Override
-    public void CadastrarProduto() {
+    public void CadastrarProduto(int quantidade, String nome, float valor, String tipo) {
+        switch (tipo) {
+            // BEBIDAS
+            case "PAO":
+                paocad.add(new PaoGenerico(quantidade, nome, valor));
+                break;
+            case "BEBIDA":
+                bebidacad.add(new BebidaGenerica(quantidade, nome, valor));
+                break;
+            case "SALGADO":
+                salgadocad.add(new SalgadoGenerico(quantidade, nome, valor));
+                break;
+            case "DOCE":
+                docecad.add(new DoceGenerico(quantidade, nome, valor));
+                break;
+        }
     }
     
     @Override

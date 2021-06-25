@@ -2,6 +2,7 @@ package RegraDeNegocios;
 public class PaoDeQueijo extends Salgado{
     public PaoDeQueijo(int quantidade) {
         super(quantidade);
+        this.setClasse("PAODEQUEIJO");
     }
     
     @Override

@@ -2,6 +2,7 @@ package RegraDeNegocios;
 public class PaoJaco extends Pao{
     public PaoJaco(int quantidade) {
         super(quantidade);
+        this.setClasse("PAOJACO");
     }
     @Override
     public String VenderPao(int quantidade, float pago) {

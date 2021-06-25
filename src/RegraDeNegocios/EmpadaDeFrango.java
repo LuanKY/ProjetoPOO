@@ -2,6 +2,7 @@ package RegraDeNegocios;
 public class EmpadaDeFrango extends Salgado{
     public EmpadaDeFrango(int quantidade) {
         super(quantidade);
+        this.setClasse("EMPADADEFRANGO");
     }
     
     @Override

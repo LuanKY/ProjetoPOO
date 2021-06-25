@@ -2,6 +2,7 @@ package RegraDeNegocios;
 public class Beijinho extends Doce{
     public Beijinho(int quantidade) {
         super(quantidade);
+        this.setClasse("BEIJINHO");
     }
     
     @Override

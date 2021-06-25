@@ -2,6 +2,7 @@ package RegraDeNegocios;
 public class Tartilete extends Doce{
     public Tartilete(int quantidade) {
         super(quantidade);
+        this.setClasse("TARTILETE");
     }
     
     @Override

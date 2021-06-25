@@ -2,6 +2,7 @@ package RegraDeNegocios;
 public class CoxinhaDeFrango extends Salgado{
     public CoxinhaDeFrango(int quantidade) {
         super(quantidade);
+        this.setClasse("COXINHADEFRANGO");
     }
     
     @Override

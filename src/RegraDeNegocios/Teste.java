@@ -1,4 +1,7 @@
 package RegraDeNegocios;
+
+import java.util.Iterator;
+
 public class Teste {
     public static void main(String[] args) {
         /* Teste PAO
@@ -29,10 +32,24 @@ public class Teste {
         System.out.println(b.VenderBebida(2, 6));
         System.out.println(b.getQuantidade()); */
         
-        Estoque e = new Estoque();
+        /*Estoque e = new Estoque();
         System.out.println(e.AdicionarProdutoAoEstoque("SUCODELARANJA", 10));
         e.CadastrarVenda("SUCODELARANJA", 2, 7, 0.5f);
         System.out.println(e.getBebida().getQuantidade());
-        System.out.println(e.getCaixa());
+        System.out.println(e.getCaixa());*/
+        
+        Estoque e = new Estoque();
+        e.CadastrarProduto(10, "PAODECHOCOLATE", 0.40f, "PAO");
+        e.CadastrarProduto(20, "PAODEPUBA", 0.50f, "PAO");
+        System.out.println(e.paocad.get(0).VenderPao(10, 3));
+        System.out.println(e.paocad.get(0).VenderPao(1));
+        
+        // Codigo que mostra os objetos cadastrados
+        Iterator it = e.paocad.iterator();
+        while (it.hasNext()) {
+            Pao a;
+            a = (Pao) it.next();
+            System.out.println(a.getClasse());
+        }
     }
 }

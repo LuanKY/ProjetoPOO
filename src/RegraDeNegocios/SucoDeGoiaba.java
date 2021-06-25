@@ -3,6 +3,7 @@ public class SucoDeGoiaba extends Bebida{
 
     public SucoDeGoiaba(float quantidade) {
         super(quantidade);
+        this.setClasse("SUCODEGOIABA");
     }
     
     @Override

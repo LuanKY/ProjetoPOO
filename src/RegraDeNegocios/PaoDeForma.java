@@ -2,6 +2,7 @@ package RegraDeNegocios;
 public class PaoDeForma extends Pao{
     public PaoDeForma(int quantidade) {
         super(quantidade);
+        this.setClasse("PAODEFORMA");
     }
     
     @Override

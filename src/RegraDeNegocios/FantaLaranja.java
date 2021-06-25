@@ -2,6 +2,7 @@ package RegraDeNegocios;
 public class FantaLaranja extends Bebida{
     public FantaLaranja(float quantidade) {
         super(quantidade);
+        this.setClasse("FANTALARANJA");
     }
     
     @Override

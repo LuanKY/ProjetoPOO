@@ -2,6 +2,7 @@ package RegraDeNegocios;
 public class PaoCilindro extends Pao{
     public PaoCilindro(int quantidade) {
         super(quantidade);
+        this.setClasse("PAOCILINDRO");
     }
     
     @Override

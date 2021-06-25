@@ -3,6 +3,7 @@ public class PaoCocada extends Pao{
 
     public PaoCocada(int quantidade) {
         super(quantidade);
+        this.setClasse("PAOCOCADA");
     }
 
     @Override
