@@ -38,18 +38,18 @@ public class Teste {
         System.out.println(e.getBebida().getQuantidade());
         System.out.println(e.getCaixa());*/
         
-        Estoque e = new Estoque();
-        e.CadastrarProduto(10, "PAODECHOCOLATE", 0.40f, "PAO");
-        e.CadastrarProduto(20, "PAODEPUBA", 0.50f, "PAO");
-        System.out.println(e.paocad.get(0).VenderPao(10, 3));
-        System.out.println(e.paocad.get(0).VenderPao(1));
+        //Estoque e = new Estoque();
+        //e.CadastrarProduto(10, "PAODECHOCOLATE", 0.40f, "PAO");
+        //e.CadastrarProduto(20, "PAODEPUBA", 0.50f, "PAO");
+        //System.out.println(e.paocad.get(0).VenderPao(10, 3));
+        //System.out.println(e.paocad.get(0).VenderPao(1));
         
         // Codigo que mostra os objetos cadastrados
-        Iterator it = e.paocad.iterator();
-        while (it.hasNext()) {
-            Pao a;
-            a = (Pao) it.next();
-            System.out.println(a.getClasse());
-        }
-    }
+        //Iterator it = e.paocad.iterator();
+        //while (it.hasNext()) {
+            //Pao a;
+            //a = (Pao) it.next();
+            //System.out.println(a.getClasse());
+       // }
+   }
 }
