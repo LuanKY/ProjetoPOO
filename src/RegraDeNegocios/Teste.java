@@ -38,18 +38,25 @@ public class Teste {
         System.out.println(e.getBebida().getQuantidade());
         System.out.println(e.getCaixa());*/
         
-        //Estoque e = new Estoque();
-        //e.CadastrarProduto(10, "PAODECHOCOLATE", 0.40f, "PAO");
-        //e.CadastrarProduto(20, "PAODEPUBA", 0.50f, "PAO");
-        //System.out.println(e.paocad.get(0).VenderPao(10, 3));
-        //System.out.println(e.paocad.get(0).VenderPao(1));
+        Estoque e = new Estoque();
+        e.CadastrarProduto(10, "FANTAUVA", 0.40f, "BEBIDA");
+        e.CadastrarProduto(20, "FANTAMORANGO", 0.50f, "BEBIDA");
+        //e.AdicionarProdutoAoEstoque("FANTALARANJA", 10);
+        e.AdicionarProdutoAoEstoque("COCACOLA", 20);
+        //e.CadastrarVenda("FANTALARANJA", 10, 25);
+        e.CadastrarVenda("COCACOLA", 10, 35);
+        //System.out.println(e.bebidaestoque.get(2).getQuantidade());
+        //System.out.println(e.bebidaestoque.get(3).getQuantidade());
+        //System.out.println(e.getCaixa());
         
         // Codigo que mostra os objetos cadastrados
-        //Iterator it = e.paocad.iterator();
-        //while (it.hasNext()) {
-            //Pao a;
-            //a = (Pao) it.next();
-            //System.out.println(a.getClasse());
-       // }
-   }
+        /*Iterator it = e.bebidaestoque.iterator();
+        while (it.hasNext()) {
+        Bebida a;
+        a = (Bebida) it.next();
+        System.out.println(a.getClasse());
+        }*/
+        //e.AdicionarProdutoAoEstoque("COCACOLA", 10);
+        //System.out.println(e.bebidaestoque.get(0).VenderBebida(2, 7));
+    }
 }

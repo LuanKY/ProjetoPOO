@@ -10,48 +10,12 @@ import java.util.logging.Logger;
 
 public class Estoque implements MetodosEstoque{
     private float caixa;
-    private Bebida bebida;
-    private Pao pao;
-    private Doce doce;
-    private Salgado salgado;
-    public List<Pao> paocad = new ArrayList<>();
-    public List<Bebida> bebidacad = new ArrayList<>();
-    public List<Salgado> salgadocad = new ArrayList<>();
-    public List<Doce> docecad = new ArrayList<>();
+    public List<Pao> paoestoque = new ArrayList<>();
+    public List<Bebida> bebidaestoque = new ArrayList<>();
+    public List<Salgado> salgadoestoque = new ArrayList<>();
+    public List<Doce> doceestoque = new ArrayList<>();
+    public String[] foraestoque;
 
-    public Bebida getBebida() {
-        return bebida;
-    }
-
-    public void setBebida(Bebida bebida) {
-        this.bebida = bebida;
-    }
-
-    public Pao getPao() {
-        return pao;
-    }
-
-    public void setPao(Pao pao) {
-        this.pao = pao;
-    }
-
-    public Doce getDoce() {
-        return doce;
-    }
-
-    public void setDoce(Doce doce) {
-        this.doce = doce;
-    }
-
-    public Salgado getSalgado() {
-        return salgado;
-    }
-
-    public void setSalgado(Salgado salgado) {
-        this.salgado = salgado;
-    }
-
-    
     public float getCaixa() {
         return caixa;
     }
@@ -66,67 +30,67 @@ public class Estoque implements MetodosEstoque{
         switch (classe) {
             // BEBIDAS
             case "COCACOLA":
-                this.bebida = new CoCaCola(quantidade);
+                bebidaestoque.add(new CoCaCola(quantidade));
                 break;
             case "SPRITE":
-                this.bebida = new Sprite(quantidade);
+                bebidaestoque.add(new Sprite(quantidade));
                 break;
             case "FANTALARANJA":
-                this.bebida = new FantaLaranja(quantidade);
+                bebidaestoque.add(new FantaLaranja(quantidade));
                 break;
             case "SUCODEGOIABA":
-                this.bebida = new SucoDeGoiaba(quantidade);
+                bebidaestoque.add(new SucoDeGoiaba(quantidade));
                 break;
             case "SUCODELARANJA":
-                this.bebida = new SucoDeLaranja(quantidade);
+                bebidaestoque.add(new SucoDeLaranja(quantidade));
                 break;
             // PÃES
             case "PAOCARTEIRA":
-                this.pao = new PaoCarteira(quantidade);
+                paoestoque.add(new PaoCarteira(quantidade));
                 break;
             case "PAOCILINDRO":
-                this.pao = new PaoCilindro(quantidade);
+                paoestoque.add(new PaoCilindro(quantidade));
                 break;
             case "PAOJACO":
-                this.pao = new PaoJaco(quantidade);
+                paoestoque.add(new PaoJaco(quantidade));
                 break;
             case "PAODEFORMA":
-                this.pao = new PaoDeForma(quantidade);
+                paoestoque.add(new PaoDeForma(quantidade));
                 break;
             case "PAOCOCADA":
-                this.pao = new PaoCocada(quantidade);
+                paoestoque.add(new PaoCocada(quantidade));
                 break;
             // DOCES
             case "BRIGADEIRO":
-                this.doce = new Brigadeiro(quantidade);
+                doceestoque.add(new Brigadeiro(quantidade));
                 break;
             case "BEIJINHO":
-                this.doce = new Beijinho(quantidade);
+                doceestoque.add(new Beijinho(quantidade));
                 break;
             case "COCADA":
-                this.doce = new Cocada(quantidade);
+                doceestoque.add(new Cocada(quantidade));
                 break;
             case "SONHODEGOIABADA":
-                this.doce = new SonhoDeGoiabada(quantidade);
+                doceestoque.add(new SonhoDeGoiabada(quantidade));
                 break;
             case "TARTILETE":
-                this.doce = new Tartilete(quantidade);
+                doceestoque.add(new Tartilete(quantidade));
                 break;
             // SALGADOS
             case "COXINHADEFRANGO":
-                this.salgado = new CoxinhaDeFrango(quantidade);
+                salgadoestoque.add(new CoxinhaDeFrango(quantidade));
                 break;
             case "EMPADADEFRANGO":
-                this.salgado = new EmpadaDeFrango(quantidade);
+                salgadoestoque.add(new EmpadaDeFrango(quantidade));
                 break;
             case "KIBE":
-                this.salgado = new Kibe(quantidade);
+                salgadoestoque.add(new Kibe(quantidade));
                 break;
             case "PAODEQUEIJO":
-                this.salgado = new PaoDeQueijo(quantidade);
+                salgadoestoque.add(new PaoDeQueijo(quantidade));
                 break;
             case "PASTELDEQUEIJO":
-                this.salgado = new PastelDeQueijo(quantidade);
+                salgadoestoque.add(new PastelDeQueijo(quantidade));
                 break;
         }
         
@@ -150,109 +114,138 @@ public class Estoque implements MetodosEstoque{
     
     @Override
     public void CadastrarVenda(String classe, int quantidade, float pago) {
-        switch (classe) {
-            // BEBIDAS
-            case "COCACOLA":
-                this.bebida.VenderBebida(quantidade, pago);
-                this.setCaixa(this.getCaixa()+this.bebida.getRenda());
-                break;
-            case "SPRITE":
-                this.bebida.VenderBebida(quantidade, pago);
-                this.setCaixa(this.getCaixa()+this.bebida.getRenda());
-                break;
-            case "FANTALARANJA":
-                this.bebida.VenderBebida(quantidade, pago);
-                this.setCaixa(this.getCaixa()+this.bebida.getRenda());
-                break;
-            // PÃES
-            case "PAOCARTEIRA":
-                this.pao.VenderPao(quantidade, pago);
-                this.setCaixa(this.getCaixa()+this.pao.getRenda());
-                break;
-            case "PAOCILINDRO":
-                this.pao.VenderPao(quantidade, pago);
-                this.setCaixa(this.getCaixa()+this.pao.getRenda());
-                break;
-            case "PAOJACO":
-                this.pao.VenderPao(quantidade, pago);
-                this.setCaixa(this.getCaixa()+this.pao.getRenda());
-                break;
-            case "PAODEFORMA":
-                this.pao.VenderPao(quantidade, pago);
-                this.setCaixa(this.getCaixa()+this.pao.getRenda());
-                break;
-            // DOCES
-            case "BRIGADEIRO":
-                this.doce.VenderDoce(quantidade, pago);
-                this.setCaixa(this.getCaixa()+this.doce.getRenda());
-                break;
-            case "BEIJINHO":
-                this.doce.VenderDoce(quantidade, pago);
-                this.setCaixa(this.getCaixa()+this.doce.getRenda());
-                break;
-            case "COCADA":
-                this.doce.VenderDoce(quantidade, pago);
-                this.setCaixa(this.getCaixa()+this.doce.getRenda());
-                break;
-            case "SONHODEGOIABADA":
-                this.doce.VenderDoce(quantidade, pago);
-                this.setCaixa(this.getCaixa()+this.doce.getRenda());
-                break;
-            case "TARTILETE":
-                this.doce.VenderDoce(quantidade, pago);
-                this.setCaixa(this.getCaixa()+this.doce.getRenda());
-                break;
-            // SALGADOS
-            case "COXINHADEFRANGO":
-                this.salgado.VenderSalgado(quantidade, pago);
-                this.setCaixa(this.getCaixa()+this.salgado.getRenda());
-                break;
-            case "EMPADADEFRANGO":
-                this.salgado.VenderSalgado(quantidade, pago);
-                this.setCaixa(this.getCaixa()+this.salgado.getRenda());
-                break;
-            case "KIBE":
-                this.salgado.VenderSalgado(quantidade, pago);
-                this.setCaixa(this.getCaixa()+this.salgado.getRenda());
-                break;
-            case "PAODEQUEIJO":
-                this.salgado.VenderSalgado(quantidade, pago);
-                this.setCaixa(this.getCaixa()+this.salgado.getRenda());
-                break;
-            case "PASTELDEQUEIJO":
-                this.salgado.VenderSalgado(quantidade, pago);
-                this.setCaixa(this.getCaixa()+this.salgado.getRenda());
-                break;
+        if ("COCACOLA".equals(classe) || "SPRITE".equals(classe) || "FANTALARANJA".equals(classe)) {
+            for (int i = 0; i < bebidaestoque.size(); i++) {
+            String nome = bebidaestoque.get(i).getClasse();
+                switch (nome) {
+                case "COCACOLA":
+                    bebidaestoque.get(i).VenderBebida(quantidade, pago);
+                    System.out.println(bebidaestoque.get(i).getRenda());
+                    this.setCaixa(this.getCaixa()+bebidaestoque.get(i).getRenda());
+                    System.out.println(bebidaestoque.get(i).getRenda());
+                    System.out.println(this.getCaixa());
+                    bebidaestoque.get(i).setRenda(0);
+                    System.out.println(bebidaestoque.get(i).getRenda());
+                    break;
+                case "SPRITE":
+                    bebidaestoque.get(i).VenderBebida(quantidade, pago);
+                    this.setCaixa(this.getCaixa()+bebidaestoque.get(i).getRenda());
+                    bebidaestoque.get(i).setRenda(0);
+                    break;
+                case "FANTALARANJA":
+                    bebidaestoque.get(i).VenderBebida(quantidade, pago);
+                    this.setCaixa(this.getCaixa()+bebidaestoque.get(i).getRenda());
+                    bebidaestoque.get(i).setRenda(0);
+                    break;
+                }
+            }
+        } else if ("PAOCARTEIRA".equals(classe) || "PAOCILINDRO".equals(classe) || "PAOJACO".equals(classe) || "PAODEFORMA".equals(classe)) {
+            for (int i = 0; i < paoestoque.size(); i++) {
+            String nome = paoestoque.get(i).getClasse();
+                switch (nome) {
+                case "PAOCARTEIRA":
+                    paoestoque.get(i).VenderPao(quantidade, pago);
+                    this.setCaixa(this.getCaixa()+paoestoque.get(i).getRenda());
+                    break;
+                case "PAOCILINDRO":
+                    paoestoque.get(i).VenderPao(quantidade, pago);
+                    this.setCaixa(this.getCaixa()+paoestoque.get(i).getRenda());
+                    break;
+                case "PAOJACO":
+                    paoestoque.get(i).VenderPao(quantidade, pago);
+                    this.setCaixa(this.getCaixa()+paoestoque.get(i).getRenda());
+                    break;
+                case "PAODEFORMA":
+                    paoestoque.get(i).VenderPao(quantidade, pago);
+                    this.setCaixa(this.getCaixa()+paoestoque.get(i).getRenda());
+                    break;
+                }
+                paoestoque.get(i).setRenda(0);
+            }
+        } else if ("BRIGADEIRO".equals(classe) || "BEIJINHO".equals(classe) || "COCADA".equals(classe) || "SONHODEGOIABADA".equals(classe) || "TARTILETE".equals(classe)) {
+            for (int i = 0; i < doceestoque.size(); i++) {
+            String nome = doceestoque.get(i).getClasse();
+                switch (nome) {
+                case "BRIGADEIRO":
+                    doceestoque.get(i).VenderDoce(quantidade, pago);
+                    this.setCaixa(this.getCaixa()+doceestoque.get(i).getRenda());
+                    break;
+                case "BEIJINHO":
+                    doceestoque.get(i).VenderDoce(quantidade, pago);
+                    this.setCaixa(this.getCaixa()+doceestoque.get(i).getRenda());
+                    break;
+                case "COCADA":
+                    doceestoque.get(i).VenderDoce(quantidade, pago);
+                    this.setCaixa(this.getCaixa()+doceestoque.get(i).getRenda());
+                    break;
+                case "SONHODEGOIABADA":
+                    doceestoque.get(i).VenderDoce(quantidade, pago);
+                    this.setCaixa(this.getCaixa()+doceestoque.get(i).getRenda());
+                    break;
+                case "TARTILETE":
+                    doceestoque.get(i).VenderDoce(quantidade, pago);
+                    this.setCaixa(this.getCaixa()+doceestoque.get(i).getRenda());
+                    break;
+                }
+                doceestoque.get(i).setRenda(0);
+            }
+        } else if ("COXINHADEFRANGO".equals(classe) || "EMPADADEFRANGO".equals(classe) || "KIBE".equals(classe) || "PAODEQUEIJO".equals(classe) || "PASTELDEQUEIJO".equals(classe)) {
+            for (int i = 0; i < salgadoestoque.size(); i++) {
+            String nome = salgadoestoque.get(i).getClasse();
+                switch (nome) {
+                case "COXINHADEFRANGO":
+                    salgadoestoque.get(i).VenderSalgado(quantidade, pago);
+                    this.setCaixa(this.getCaixa()+salgadoestoque.get(i).getRenda());
+                    break;
+                case "EMPADADEFRANGO":
+                    salgadoestoque.get(i).VenderSalgado(quantidade, pago);
+                    this.setCaixa(this.getCaixa()+salgadoestoque.get(i).getRenda());
+                    break;
+                case "KIBE":
+                    salgadoestoque.get(i).VenderSalgado(quantidade, pago);
+                    this.setCaixa(this.getCaixa()+salgadoestoque.get(i).getRenda());
+                    break;
+                case "PAODEQUEIJO":
+                    salgadoestoque.get(i).VenderSalgado(quantidade, pago);
+                    this.setCaixa(this.getCaixa()+salgadoestoque.get(i).getRenda());
+                    break;
+                case "PASTELDEQUEIJO":
+                    salgadoestoque.get(i).VenderSalgado(quantidade, pago);
+                    this.setCaixa(this.getCaixa()+salgadoestoque.get(i).getRenda());
+                    break;
+                }
+                salgadoestoque.get(i).setRenda(0);
+            }
         }
-        this.bebida.setRenda(0);
-        this.doce.setRenda(0);
-        this.pao.setRenda(0);
-        this.salgado.setRenda(0);
     }
     
     @Override
     public void CadastrarVenda(String classe, int quantidade, float pago, float tamanho) { // Metodo Apenas Para as Classes de Suco
-        switch (classe) {
-            case "SUCODEGOIABA":
-                this.bebida.setMl(tamanho);
-                this.bebida.VenderBebida(quantidade, pago);
-                this.setCaixa(this.getCaixa()+this.bebida.getRenda());
-                break;
-            case "SUCODELARANJA":
-                this.bebida.setMl(tamanho);
-                this.bebida.VenderBebida(quantidade, pago);
-                this.setCaixa(this.getCaixa()+this.bebida.getRenda());
-                break;
+        for (int i = 0; i < bebidaestoque.size(); i++) {
+            String nome = bebidaestoque.get(i).getClasse();
+            switch (nome) {
+                case "SUCODEGOIABA":
+                    bebidaestoque.get(i).setMl(tamanho);
+                    bebidaestoque.get(i).VenderBebida(quantidade, pago);
+                    this.setCaixa(this.getCaixa()+bebidaestoque.get(i).getRenda());
+                case "SUCODELARANJA":
+                    bebidaestoque.get(i).setMl(tamanho);
+                    bebidaestoque.get(i).VenderBebida(quantidade, pago);
+                    this.setCaixa(this.getCaixa()+bebidaestoque.get(i).getRenda());
+                }
+            bebidaestoque.get(i).setRenda(0);
         }
-        this.bebida.setRenda(0);
     }
     
     @Override
     public void CadastrarVenda(int quantidade, float pago, boolean goiabada) { // Metodo Apenas Para a Classe Pao Cocada
-        this.pao.setGoiabada(goiabada);
-        this.pao.VenderPao(quantidade, pago);
-        this.setCaixa(this.getCaixa()+this.pao.getRenda());
-        this.pao.setRenda(0);
+        for (int i = 0; i < paoestoque.size(); i++) {
+            String nome = paoestoque.get(i).getClasse();
+            paoestoque.get(i).setGoiabada(goiabada);
+            paoestoque.get(i).VenderPao(quantidade, pago);
+            this.setCaixa(this.getCaixa()+paoestoque.get(i).getRenda());
+            paoestoque.get(i).setRenda(0);
+        }
     }
     
     @Override
@@ -260,16 +253,16 @@ public class Estoque implements MetodosEstoque{
         switch (tipo) {
             // BEBIDAS
             case "PAO":
-                paocad.add(new PaoGenerico(quantidade, nome, valor));
+                paoestoque.add(new PaoGenerico(quantidade, nome, valor));
                 break;
             case "BEBIDA":
-                bebidacad.add(new BebidaGenerica(quantidade, nome, valor));
+                bebidaestoque.add(new BebidaGenerica(quantidade, nome, valor));
                 break;
             case "SALGADO":
-                salgadocad.add(new SalgadoGenerico(quantidade, nome, valor));
+                salgadoestoque.add(new SalgadoGenerico(quantidade, nome, valor));
                 break;
             case "DOCE":
-                docecad.add(new DoceGenerico(quantidade, nome, valor));
+                doceestoque.add(new DoceGenerico(quantidade, nome, valor));
                 break;
         }
     }
