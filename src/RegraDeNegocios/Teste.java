@@ -39,12 +39,28 @@ public class Teste {
         System.out.println(e.getCaixa());*/
         
         Estoque e = new Estoque();
-        e.CadastrarProduto(10, "FANTAUVA", 0.40f, "BEBIDA");
-        e.CadastrarProduto(20, "FANTAMORANGO", 0.50f, "BEBIDA");
-        //e.AdicionarProdutoAoEstoque("FANTALARANJA", 10);
-        e.AdicionarProdutoAoEstoque("COCACOLA", 20);
-        //e.CadastrarVenda("FANTALARANJA", 10, 25);
-        e.CadastrarVenda("COCACOLA", 10, 35);
+        e.AdicionarProdutoAoEstoque("PAOJACO", 20);
+        e.AdicionarProdutoAoEstoque("PAODEFORMA", 20);
+        e.AdicionarProdutoAoEstoque("SUCODEGOIABA", 20);
+        e.AdicionarProdutoAoEstoque("SUCODELARANJA", 20);
+        e.AdicionarProdutoAoEstoque("PAOCOCADA", 20);
+        e.AdicionarProdutoAoEstoque("FANTALARANJA", 20);
+        e.CadastrarVenda("FANTALARANJA", 10, 25);
+        System.out.println(e.getCaixa());
+        e.CadastrarVenda("PAOJACO", 10, 2.5f);
+        System.out.println(e.getCaixa());
+        e.CadastrarVenda("PAOJACO", 10, 2.5f);
+        System.out.println(e.getCaixa());
+        e.CadastrarVenda("PAODEFORMA", 10, 50);
+        System.out.println(e.getCaixa());
+        e.CadastrarVenda("SUCODEGOIABA", 2, 7, 0.5f);
+        System.out.println(e.getCaixa());
+        e.CadastrarVenda("SUCODELARANJA", 3, 7.5f, 0.3f);
+        System.out.println(e.getCaixa());
+        e.CadastrarVenda(10, 6, true);
+        System.out.println(e.getCaixa());
+        e.CadastrarVenda(10, 5, false);
+        System.out.println(e.getCaixa());
         //System.out.println(e.bebidaestoque.get(2).getQuantidade());
         //System.out.println(e.bebidaestoque.get(3).getQuantidade());
         //System.out.println(e.getCaixa());

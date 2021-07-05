@@ -11,11 +11,11 @@ public class SucoDeLaranja extends Bebida{
         // Antes da execução do metodo, deve ser setado o tamanho
         this.setCopos(copos);
         float tam = this.getMl();
-        if (tam == 0.2f) {
+        if (tam <= 0.2f) {
             this.setPreco(2);
-        } else if (tam == 0.3f) {
+        } else if (tam <= 0.3f) {
             this.setPreco(2.5f);
-        } else if (tam == 0.5f) {
+        } else if (tam <= 0.5f) {
             this.setPreco(3.5f);
         } else {
             return "Só temos os tamanhos P, M e G";
