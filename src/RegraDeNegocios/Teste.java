@@ -32,13 +32,14 @@ public class Teste {
         System.out.println(b.VenderBebida(2, 6));
         System.out.println(b.getQuantidade()); */
         
-        /*Estoque e = new Estoque();
+        /*
         System.out.println(e.AdicionarProdutoAoEstoque("SUCODELARANJA", 10));
         e.CadastrarVenda("SUCODELARANJA", 2, 7, 0.5f);
         System.out.println(e.getBebida().getQuantidade());
         System.out.println(e.getCaixa());*/
         
         Estoque e = new Estoque();
+        /* TESTE ESTOQUE
         e.AdicionarProdutoAoEstoque("PAOJACO", 20);
         e.AdicionarProdutoAoEstoque("PAODEFORMA", 20);
         e.AdicionarProdutoAoEstoque("SUCODEGOIABA", 20);
@@ -60,10 +61,17 @@ public class Teste {
         e.CadastrarVenda(10, 6, true);
         System.out.println(e.getCaixa());
         e.CadastrarVenda(10, 5, false);
-        System.out.println(e.getCaixa());
-        //System.out.println(e.bebidaestoque.get(2).getQuantidade());
-        //System.out.println(e.bebidaestoque.get(3).getQuantidade());
-        //System.out.println(e.getCaixa());
+        System.out.println(e.getCaixa());*/
+        
+        e.CadastrarProduto(10, "FANTAUVA", 3, "BEBIDA");
+        e.CadastrarProduto(13, "GROSZELIA", 4, "BEBIDA");
+        e.CadastrarProduto(32, "CAFE", 2, "PAO");
+        e.CadastrarProduto(12, "NESCAU", 1.5F, "BEBIDA");
+        e.bebidanovo.get(0).setQuantidade(0);
+        e.bebidanovo.get(1).setQuantidade(0);
+        System.out.println(e.ListarProdutosEmEstoque());
+        System.out.println(e.ListarProdutosForaEstoque());
+        
         
         // Codigo que mostra os objetos cadastrados
         /*Iterator it = e.bebidaestoque.iterator();

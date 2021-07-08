@@ -14,6 +14,10 @@ public class Estoque implements MetodosEstoque{
     public List<Bebida> bebidaestoque = new ArrayList<>();
     public List<Salgado> salgadoestoque = new ArrayList<>();
     public List<Doce> doceestoque = new ArrayList<>();
+    public List<Pao> paonovo = new ArrayList<>();
+    public List<Bebida> bebidanovo = new ArrayList<>();
+    public List<Salgado> salgadonovo = new ArrayList<>();
+    public List<Doce> docenovo = new ArrayList<>();
     public String[] foraestoque;
 
     public float getCaixa() {
@@ -262,37 +266,159 @@ public class Estoque implements MetodosEstoque{
         switch (tipo) {
             // BEBIDAS
             case "PAO":
-                paoestoque.add(new PaoGenerico(quantidade, nome, valor));
+                paonovo.add(new PaoGenerico(quantidade, nome, valor));
                 break;
             case "BEBIDA":
-                bebidaestoque.add(new BebidaGenerica(quantidade, nome, valor));
+                bebidanovo.add(new BebidaGenerica(quantidade, nome, valor));
                 break;
             case "SALGADO":
-                salgadoestoque.add(new SalgadoGenerico(quantidade, nome, valor));
+                salgadonovo.add(new SalgadoGenerico(quantidade, nome, valor));
                 break;
             case "DOCE":
-                doceestoque.add(new DoceGenerico(quantidade, nome, valor));
+                docenovo.add(new DoceGenerico(quantidade, nome, valor));
                 break;
         }
     }
     
     @Override
-    public void ExcluirProduto() {
-}
-    @Override
-    public void ListarProdutosCadastrados() {
+    public String ListarProdutosEmEstoque() {
+        String produtos = "";
+        for (int i = 0; i < bebidaestoque.size(); i++) {
+            if(bebidaestoque.get(i).getQuantidade() > 0) {
+                produtos += bebidaestoque.get(i).getClasse();
+                produtos += ", ";
+            }
+        }
+        for (int i = 0; i < bebidanovo.size(); i++) {
+            if(bebidanovo.get(i).getQuantidade() > 0) {
+                produtos += bebidanovo.get(i).getClasse();
+                produtos += ", ";
+            }
+        }
+        for (int i = 0; i < paoestoque.size(); i++) {
+            if(paoestoque.get(i).getQuantidade() > 0) {
+                produtos += paoestoque.get(i).getClasse();
+                produtos += ", ";
+            }
+        }
+        for (int i = 0; i < paonovo.size(); i++) {
+            if(paonovo.get(i).getQuantidade() > 0) {
+                produtos += paonovo.get(i).getClasse();
+                produtos += ", ";
+            }
+        }
+        for (int i = 0; i < salgadoestoque.size(); i++) {
+            if(salgadoestoque.get(i).getQuantidade() > 0) {
+                produtos += salgadoestoque.get(i).getClasse();
+                produtos += ", ";
+            }
+        }
+        for (int i = 0; i < salgadonovo.size(); i++) {
+            if(salgadonovo.get(i).getQuantidade() > 0) {
+                produtos += salgadonovo.get(i).getClasse();
+                produtos += ", ";
+            }
+        }
+        for (int i = 0; i < doceestoque.size(); i++) {
+            if(doceestoque.get(i).getQuantidade() > 0) {
+                produtos += doceestoque.get(i).getClasse();
+                produtos += ", ";
+            }
+        }
+        for (int i = 0; i < docenovo.size(); i++) {
+            if(docenovo.get(i).getQuantidade() > 0) {
+                produtos += docenovo.get(i).getClasse();
+                produtos += ", ";
+            }
+        }
+        return produtos;
     }
     
     @Override
-    public void ListarProdutosEmEstoque() {
+    public String ListarProdutosCadastrados() {
+        String produtos = "COCACOLA, SPRITE, FANTALARANJA, SUCODELARANJA, SUCODEGOIABA,"
+                + " \nPAOJACO, PAOCOCADA, PAOCARTEIRA, PAODEFORMA, PAOCILINDRO,"
+                + " \nBEIJINHO, BRIGADEIRO, SONHODEGOIABADA, TARTILETE, COCADA,"
+                + " \nKIBE, PASTELDEQUEIJO, PAODEQUEIJO, EMPADADEFRANGO, COXINHADEFRANGO, ";
+        for (int i = 0; i < bebidanovo.size(); i++) {
+            produtos += bebidanovo.get(i).getClasse();
+            produtos += ", ";
+        }
+        for (int i = 0; i < paonovo.size(); i++) {
+            produtos += paonovo.get(i).getClasse();
+            produtos += ", ";
+        }
+        for (int i = 0; i < salgadonovo.size(); i++) {
+            produtos += salgadonovo.get(i).getClasse();
+            produtos += ", ";
+        }
+        for (int i = 0; i < docenovo.size(); i++) {
+            produtos += docenovo.get(i).getClasse();
+            produtos += ", ";
+        }
+        return produtos;
+    }
+    
+    @Override
+    public String ListarProdutosForaEstoque() {
+        String produtos = "";
+        for (int i = 0; i < bebidaestoque.size(); i++) {
+            if(bebidaestoque.get(i).getQuantidade() == 0) {
+                produtos += bebidaestoque.get(i).getClasse();
+                produtos += ", ";
+            }
+        }
+        for (int i = 0; i < bebidanovo.size(); i++) {
+            if(bebidanovo.get(i).getQuantidade() == 0) {
+                produtos += bebidanovo.get(i).getClasse();
+                produtos += ", ";
+            }
+        }
+        for (int i = 0; i < paoestoque.size(); i++) {
+            if(paoestoque.get(i).getQuantidade() == 0) {
+                produtos += paoestoque.get(i).getClasse();
+                produtos += ", ";
+            }
+        }
+        for (int i = 0; i < paonovo.size(); i++) {
+            if(paonovo.get(i).getQuantidade() == 0) {
+                produtos += paonovo.get(i).getClasse();
+                produtos += ", ";
+            }
+        }
+        for (int i = 0; i < salgadoestoque.size(); i++) {
+            if(salgadoestoque.get(i).getQuantidade() == 0) {
+                produtos += salgadoestoque.get(i).getClasse();
+                produtos += ", ";
+            }
+        }
+        for (int i = 0; i < salgadonovo.size(); i++) {
+            if(salgadonovo.get(i).getQuantidade() == 0) {
+                produtos += salgadonovo.get(i).getClasse();
+                produtos += ", ";
+            }
+        }
+        for (int i = 0; i < doceestoque.size(); i++) {
+            if(doceestoque.get(i).getQuantidade() == 0) {
+                produtos += doceestoque.get(i).getClasse();
+                produtos += ", ";
+            }
+        }
+        for (int i = 0; i < docenovo.size(); i++) {
+            if(docenovo.get(i).getQuantidade() == 0) {
+                produtos += docenovo.get(i).getClasse();
+                produtos += ", ";
+            }
+        }
+        return produtos;
+    }
+    
+    @Override
+    public void ExcluirProduto() {
     }
     
     @Override
     public void ListarProdutosCategoria() {
-    }
-    
-    @Override
-    public void ListarProdutosForaEstoque() {
     }
     
     @Override
