@@ -40,4 +40,19 @@ public class SucoDeGoiaba extends Bebida{
             return "A Compra não pode ser realizada, pois só há " + this.getQuantidade() + " Bebidas no estoque";
         }
     }
+    @Override
+    public String VenderBebida(float valor) {
+        if ((valor)*-1 == this.getFalta()) {
+            this.setQuantidade(this.getQuantidade()-this.getMl()*this.getCopos());
+            this.setRenda(this.getRenda()+valor);
+            this.setFalta(this.getFalta()+valor);
+            return "A Compra foi realizada com sucesso";
+        } else {
+            float troco = valor+this.getFalta();
+            this.setQuantidade(this.getQuantidade()-this.getMl()*this.getCopos());
+            this.setRenda(this.getRenda()+(valor-troco));
+            this.setFalta(this.getFalta()-(valor-troco));
+            return "A Compra foi realizada com sucesso, seu troco é de " + troco;
+        }
+    }
 }

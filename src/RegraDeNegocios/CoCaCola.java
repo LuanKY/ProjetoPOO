@@ -22,7 +22,9 @@ public class CoCaCola extends Bebida{
             } else {
                 this.setRenda(this.getRenda()+pago);
                 this.setFalta(pago - (quantidade*this.getPreco()));
+                this.setLatas(quantidade);
                 return "A Compra não pode ser realizada, faltou R$" + (this.getFalta())*-1;
+                
             }
         } else {
             return "A Compra não pode ser realizada, pois só há " + this.getQuantidade() + " CoCaCola no estoque";

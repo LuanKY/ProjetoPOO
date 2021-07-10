@@ -68,6 +68,17 @@ public class Teste {
         e.CadastrarProduto(32, "CAFE", 2, "BEBIDA");
         e.CadastrarProduto(12, "NESCAU", 1.5F, "BEBIDA");
         System.out.println(e.ListarVendas());
+        
+        CoCaCola c1 = new CoCaCola(10);
+        System.out.println(c1.VenderBebida(3, 11));
+        System.out.println(c1.getQuantidade());
+        System.out.println(c1.VenderBebida(3, 10.5f));
+        System.out.println(c1.getQuantidade());
+        System.out.println(c1.VenderBebida(3, 10));
+        System.out.println(c1.getQuantidade());
+        System.out.println(c1.VenderBebida(0.5f));
+        System.out.println(c1.getQuantidade());
+        System.out.println(c1.VenderBebida(3, 11));
         /*e.bebidanovo.get(0).setQuantidade(0);
         e.bebidanovo.get(1).setQuantidade(0);
         System.out.println(e.ListarProdutosEmEstoque());

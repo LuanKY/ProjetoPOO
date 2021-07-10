@@ -7,9 +7,18 @@ public abstract class Bebida implements MetodosBebida{
     private float falta;
     private float ml;
     private int copos;
+    private int latas;
 
     public Bebida(float quantidade) {
         this.quantidade = quantidade;
+    }
+
+    public int getLatas() {
+        return latas;
+    }
+
+    public void setLatas(int latas) {
+        this.latas = latas;
     }
 
     public String getClasse() {
@@ -75,13 +84,13 @@ public abstract class Bebida implements MetodosBebida{
     @Override
     public String VenderBebida(float valor) {
         if ((valor)*-1 == this.getFalta()) {
-            this.setQuantidade(this.getQuantidade()-this.ml*this.getCopos());
+            this.setQuantidade(this.getQuantidade()-this.latas);
             this.setRenda(this.getRenda()+valor);
             this.setFalta(this.getFalta()+valor);
             return "A Compra foi realizada com sucesso";
         } else {
             float troco = valor+this.getFalta();
-            this.setQuantidade(this.getQuantidade()-this.ml*this.getCopos());
+            this.setQuantidade(this.getQuantidade()-this.latas);
             this.setRenda(this.getRenda()+(valor-troco));
             this.setFalta(this.getFalta()-(valor-troco));
             return "A Compra foi realizada com sucesso, seu troco é de " + troco;
