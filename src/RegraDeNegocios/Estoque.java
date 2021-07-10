@@ -18,7 +18,7 @@ public class Estoque implements MetodosEstoque{
     public List<Bebida> bebidanovo = new ArrayList<>();
     public List<Salgado> salgadonovo = new ArrayList<>();
     public List<Doce> docenovo = new ArrayList<>();
-    public String[] foraestoque;
+    public List<String> vendas = new ArrayList<>();
 
     public float getCaixa() {
         return caixa;
@@ -118,6 +118,8 @@ public class Estoque implements MetodosEstoque{
     
     @Override
     public void CadastrarVenda(String classe, int quantidade, float pago) {
+        String venda = "Produto: " + classe + " -> Quantidade Vendida: " + quantidade + "\n";
+        vendas.add(venda);
         if ("COCACOLA".equals(classe) || "SPRITE".equals(classe) || "FANTALARANJA".equals(classe)) {
             for (int i = 0; i < bebidaestoque.size(); i++) {
                 String nome = bebidaestoque.get(i).getClasse();
@@ -227,6 +229,8 @@ public class Estoque implements MetodosEstoque{
     
     @Override
     public void CadastrarVenda(String classe, int quantidade, float pago, float tamanho) { // Metodo Apenas Para as Classes de Suco
+        String venda = "Produto: " + classe + " -> Quantidade Vendida: " + quantidade + "\n";
+        vendas.add(venda);
         for (int i = 0; i < bebidaestoque.size(); i++) {
             String nome = bebidaestoque.get(i).getClasse();
             if (nome.equals(classe)) {
@@ -249,6 +253,8 @@ public class Estoque implements MetodosEstoque{
     
     @Override
     public void CadastrarVenda(int quantidade, float pago, boolean goiabada) { // Metodo Apenas Para a Classe Pao Cocada
+        String venda = "Produto: PAOCOCADA -> Quantidade Vendida: " + quantidade + "\n";
+        vendas.add(venda);
         for (int i = 0; i < paoestoque.size(); i++) {
             String nome = paoestoque.get(i).getClasse();
             if (nome.equals("PAOCOCADA")) {
@@ -256,6 +262,7 @@ public class Estoque implements MetodosEstoque{
                 paoestoque.get(i).VenderPao(quantidade, pago);
                 this.setCaixa(this.getCaixa()+paoestoque.get(i).getRenda());
                 paoestoque.get(i).setRenda(0);
+                
             }
             paoestoque.get(i).setRenda(0);
         }
@@ -414,18 +421,78 @@ public class Estoque implements MetodosEstoque{
     }
     
     @Override
-    public void ExcluirProduto() {
+    public String ListarProdutosCategoria(String categoria) {
+        String produtos = "";
+        switch (categoria) {
+            case "PAO":
+                produtos += "PAOJACO, PAOCOCADA, PAOCARTEIRA, PAODEFORMA, PAOCILINDRO, ";
+                for (int i = 0; i < paonovo.size(); i++) {
+                    produtos += paonovo.get(i).getClasse();
+                    produtos += ", ";
+                }
+                break;
+            case "BEBIDA":
+                produtos += "COCACOLA, SPRITE, FANTALARANJA, SUCODELARANJA, SUCODEGOIABA, ";
+                for (int i = 0; i < bebidanovo.size(); i++) {
+                    produtos += bebidanovo.get(i).getClasse();
+                    produtos += ", ";
+                }
+                break;
+            case "DOCE":
+                produtos += "BEIJINHO, BRIGADEIRO, SONHODEGOIABADA, TARTILETE, COCADA, ";
+                for (int i = 0; i < docenovo.size(); i++) {
+                    produtos += docenovo.get(i).getClasse();
+                    produtos += ", ";
+                }
+                break;
+                
+            case "SALGADO":
+                produtos += "KIBE, PASTELDEQUEIJO, PAODEQUEIJO, EMPADADEFRANGO, COXINHADEFRANGO, ";
+                for (int i = 0; i < salgadonovo.size(); i++) {
+                    produtos += salgadonovo.get(i).getClasse();
+                    produtos += ", ";
+                }
+                break;
+        }
+        return produtos;
     }
     
     @Override
-    public void ListarProdutosCategoria() {
+    public void ExcluirProduto(String nome, String tipo) {
+        switch (tipo) {
+            case "PAO":
+                for (int i = 0; i < paonovo.size(); i++) {
+                    if (paonovo.get(i).getClasse().equals(nome)) {
+                        paonovo.remove(i);
+                    }
+                }
+                break;
+            case "BEBIDA":
+                for (int i = 0; i < bebidanovo.size(); i++) {
+                    if (bebidanovo.get(i).getClasse().equals(nome)) {
+                        bebidanovo.remove(i);
+                    }
+                }
+                break;
+            case "DOCE":
+                for (int i = 0; i < docenovo.size(); i++) {
+                    if (docenovo.get(i).getClasse().equals(nome)) {
+                        docenovo.remove(i);
+                    }
+                }
+                break;
+            case "SALGADO":
+                for (int i = 0; i < salgadonovo.size(); i++) {
+                    if (salgadonovo.get(i).getClasse().equals(nome)) {
+                        salgadonovo.remove(i);
+                    }
+                }
+                break;
+        }
     }
     
     @Override
-    public void ListarVendas() {
-    }
-    
-    @Override
-    public void ListarComprasCliente() {
+    public List ListarVendas() {
+        return vendas;
     }
 }

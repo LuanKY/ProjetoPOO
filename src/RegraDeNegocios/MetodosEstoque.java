@@ -1,4 +1,7 @@
 package RegraDeNegocios;
+
+import java.util.List;
+
 public interface MetodosEstoque {
     public String AdicionarProdutoAoEstoque(String classe, int quantidade);
     public void CadastrarVenda(String classe, int quantidade, float pago);
@@ -8,8 +11,7 @@ public interface MetodosEstoque {
     public String ListarProdutosEmEstoque();
     public String ListarProdutosCadastrados();
     public String ListarProdutosForaEstoque();
-    public void ExcluirProduto();
-    public void ListarProdutosCategoria();
-    public void ListarVendas();
-    public void ListarComprasCliente();
+    public String ListarProdutosCategoria(String Categoria);
+    public void ExcluirProduto(String nome, String tipo);
+    public List ListarVendas();
 }
