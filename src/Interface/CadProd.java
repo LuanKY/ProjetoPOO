@@ -38,18 +38,18 @@ public class CadProd extends javax.swing.JInternalFrame {
 
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Cadastrar produto"));
 
-        jButtonPao.setText("Pao generico");
+        jButtonPao.setText("Novo pao");
         jButtonPao.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonPaoActionPerformed(evt);
             }
         });
 
-        jButtonBebida.setText("Bebida generica");
+        jButtonBebida.setText("Nova bebida");
 
-        jButtonSalgado.setText("Salgado generico");
+        jButtonSalgado.setText("Novo salgado");
 
-        jButtonDoce.setText("Doce generico");
+        jButtonDoce.setText("Novo doce");
         jButtonDoce.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonDoceActionPerformed(evt);
@@ -63,20 +63,21 @@ public class CadProd extends javax.swing.JInternalFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel1)
-                .addGap(100, 100, 100))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(22, 22, 22)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jButtonSalgado)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jButtonDoce)
+                .addContainerGap(51, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addComponent(jLabel1)
+                        .addGap(100, 100, 100))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jButtonSalgado)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(jButtonDoce)
+                                .addGap(18, 18, 18)
+                                .addComponent(jButtonBebida)))
                         .addGap(18, 18, 18)
-                        .addComponent(jButtonBebida)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButtonPao)
-                .addGap(0, 27, Short.MAX_VALUE))
+                        .addComponent(jButtonPao)
+                        .addGap(40, 40, 40))))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -90,7 +91,7 @@ public class CadProd extends javax.swing.JInternalFrame {
                     .addComponent(jButtonPao))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jButtonSalgado)
-                .addContainerGap(93, Short.MAX_VALUE))
+                .addContainerGap(97, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
