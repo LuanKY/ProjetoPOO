@@ -7,14 +7,14 @@ package Interface;
 
 /**
  *
- * @author adria
+ * @author 1
  */
-public class AddProd extends javax.swing.JInternalFrame {
+public class CadProd extends javax.swing.JInternalFrame {
 
     /**
-     * Creates new form AddProd
+     * Creates new form CadProd
      */
-    public AddProd() {
+    public CadProd() {
         initComponents();
     }
 
@@ -36,60 +36,61 @@ public class AddProd extends javax.swing.JInternalFrame {
 
         setClosable(true);
 
-        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Adicionar produto"));
+        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Cadastrar produto"));
 
-        jButtonPao.setText("Pao");
+        jButtonPao.setText("Pao generico");
         jButtonPao.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonPaoActionPerformed(evt);
             }
         });
 
-        jButtonBebida.setText("Bebida");
+        jButtonBebida.setText("Bebida generica");
 
-        jButtonSalgado.setText("Salgado");
+        jButtonSalgado.setText("Salgado generico");
 
-        jButtonDoce.setText("Doce");
+        jButtonDoce.setText("Doce generico");
         jButtonDoce.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonDoceActionPerformed(evt);
             }
         });
 
-        jLabel1.setText("Qual produto deseja adicionar?");
+        jLabel1.setText("Qual novo produto deseja cadastrar?");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel1)
+                .addGap(100, 100, 100))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(22, 22, 22)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jButtonSalgado)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(117, 117, 117)
-                        .addComponent(jLabel1))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(44, 44, 44)
                         .addComponent(jButtonDoce)
-                        .addGap(26, 26, 26)
-                        .addComponent(jButtonBebida)
                         .addGap(18, 18, 18)
-                        .addComponent(jButtonSalgado)
-                        .addGap(18, 18, 18)
-                        .addComponent(jButtonPao)))
-                .addContainerGap(40, Short.MAX_VALUE))
+                        .addComponent(jButtonBebida)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jButtonPao)
+                .addGap(0, 27, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(66, 66, 66)
+                .addGap(73, 73, 73)
                 .addComponent(jLabel1)
-                .addGap(51, 51, 51)
+                .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButtonDoce)
                     .addComponent(jButtonBebida)
-                    .addComponent(jButtonSalgado)
                     .addComponent(jButtonPao))
-                .addContainerGap(110, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jButtonSalgado)
+                .addContainerGap(93, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -107,11 +108,11 @@ public class AddProd extends javax.swing.JInternalFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButtonPaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonPaoActionPerformed
-  
+
     }//GEN-LAST:event_jButtonPaoActionPerformed
 
     private void jButtonDoceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonDoceActionPerformed
-         new Doce().setVisible(true);
+        new DoceGenerico().setVisible(true);
     }//GEN-LAST:event_jButtonDoceActionPerformed
 
 

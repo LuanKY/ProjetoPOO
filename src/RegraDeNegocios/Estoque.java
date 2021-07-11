@@ -269,11 +269,11 @@ public class Estoque implements MetodosEstoque{
     }
     
     @Override
-    public void CadastrarProduto(int quantidade, String nome, float valor, String tipo) {
+    public String CadastrarProduto(int quantidade, String nome, float valor, String tipo) {
         switch (tipo) {
             // BEBIDAS
             case "PAO":
-                paonovo.add(new PaoGenerico(quantidade, nome, valor));
+                paonovo.add(new PaoGenerico(quantidade, nome, valor));             
                 break;
             case "BEBIDA":
                 bebidanovo.add(new BebidaGenerica(quantidade, nome, valor));
@@ -283,8 +283,26 @@ public class Estoque implements MetodosEstoque{
                 break;
             case "DOCE":
                 docenovo.add(new DoceGenerico(quantidade, nome, valor));
+                
+                 try {
+                    FileWriter fw = new FileWriter("produtos.txt",true);
+                    PrintWriter pw = new PrintWriter(fw);
+            
+                    pw.println("=====Novo doce=====");
+                    pw.println("-" + nome + ";");
+            
+                    pw.flush();
+                    pw.close();
+                    fw.close();
+                
+                } catch (IOException ex) {
+                    Logger.getLogger(Interface.DoceGenerico.class.getName()).log(Level.SEVERE, null, ex);
+                }
+                 
                 break;
         }
+        
+        return "Novo produto cadastrado com sucesso!";
     }
     
     @Override

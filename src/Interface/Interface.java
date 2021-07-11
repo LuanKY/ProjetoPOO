@@ -249,7 +249,9 @@ public class Interface extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuListaCadastradosActionPerformed
 
     private void jMenuItemCadastrarPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemCadastrarPActionPerformed
-        
+        CadProd tela = new CadProd();
+        jDesktopPane1.add(tela);
+        tela.setVisible(true);
     }//GEN-LAST:event_jMenuItemCadastrarPActionPerformed
 
     private void jMenuItem10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem10ActionPerformed

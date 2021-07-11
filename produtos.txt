@@ -1,24 +1,25 @@
-=====PÃO=====
+=====Pães=====
 -Pão carteira;
 -Pão cilindro;
 -Pão de forma;
 -Pão cocada;
 -Pão jaco;
-=====Bebida=====
+=====Bebidas=====
 -Coca cola;
 -Fanta laranja;
 -Sprite;
 -Suco de goiaba;
 -Suco de laranja;
-=====Salgado=====
+=====Salgados=====
 -Coxinha de frango;
 -Empada de frango;
 -Kibe;
 -Pastel de queijo;
 -Pão de queijo;
-=====Doce=====
+=====Doces=====
 -Tartilete;
 -Beijinho;
 -Brigadeiro;
 -Cocada;
 -Sonho de goiabada;
+

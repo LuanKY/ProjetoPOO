@@ -7,7 +7,7 @@ public interface MetodosEstoque {
     public void CadastrarVenda(String classe, int quantidade, float pago);
     public void CadastrarVenda(String classe, int quantidade, float pago, float tamanho);
     public void CadastrarVenda(int quantidade, float pago, boolean goiabada);
-    public void CadastrarProduto(int quantidade, String nome, float valor, String tipo);
+    public String CadastrarProduto(int quantidade, String nome, float valor, String tipo);
     public String ListarProdutosEmEstoque();
     public String ListarProdutosCadastrados();
     public String ListarProdutosForaEstoque();
