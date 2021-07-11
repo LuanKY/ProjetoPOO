@@ -102,8 +102,8 @@ public class Estoque implements MetodosEstoque{
             FileWriter arq = new FileWriter("estoque.dat",true);
             PrintWriter pArq = new PrintWriter(arq);
             
-            pArq.println("Nome: " + classe);
-            pArq.println("Quantidade: " + quantidade);
+            pArq.println(classe);
+            pArq.println(quantidade);
             
             pArq.flush();
             pArq.close();

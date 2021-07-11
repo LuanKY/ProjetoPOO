@@ -1,0 +1,24 @@
+=====PÃO=====
+-Pão carteira;
+-Pão cilindro;
+-Pão de forma;
+-Pão cocada;
+-Pão jaco;
+=====Bebida=====
+-Coca cola;
+-Fanta laranja;
+-Sprite;
+-Suco de goiaba;
+-Suco de laranja;
+=====Salgado=====
+-Coxinha de frango;
+-Empada de frango;
+-Kibe;
+-Pastel de queijo;
+-Pão de queijo;
+=====Doce=====
+-Tartilete;
+-Beijinho;
+-Brigadeiro;
+-Cocada;
+-Sonho de goiabada;

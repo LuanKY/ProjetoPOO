@@ -7,8 +7,12 @@ package Interface;
 
 import RegraDeNegocios.Cliente;
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -81,6 +85,11 @@ public class Interface extends javax.swing.JFrame {
         jMenu1.add(jMenuItem7);
 
         jMenuItem8.setText("Produtos cadastrados");
+        jMenuItem8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem8ActionPerformed(evt);
+            }
+        });
         jMenu1.add(jMenuItem8);
 
         jMenuItem9.setText("Produtos excluidos");
@@ -103,6 +112,11 @@ public class Interface extends javax.swing.JFrame {
         jMenu1.add(jMenuItem11);
 
         jMenuItem3.setText("Visualizar estoque");
+        jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem3ActionPerformed(evt);
+            }
+        });
         jMenu1.add(jMenuItem3);
 
         jMenuBar1.add(jMenu1);
@@ -218,7 +232,7 @@ public class Interface extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem5ActionPerformed
 
     private void jMenuItem9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem9ActionPerformed
-        // TODO add your handling code here:
+       
     }//GEN-LAST:event_jMenuItem9ActionPerformed
 
     private void jMenuItem12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem12ActionPerformed
@@ -248,6 +262,32 @@ public class Interface extends javax.swing.JFrame {
         Cliente cliente = new Cliente();
         cliente.ListarClienteExcluidos();
     }//GEN-LAST:event_jMenuItem4ActionPerformed
+
+    private void jMenuItem8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem8ActionPerformed
+        
+        Path caminho = Paths.get("produtos.txt");
+        try {
+            byte[] lista = Files.readAllBytes(caminho);
+            String leitura = new String(lista);
+            
+            JOptionPane.showMessageDialog(null, leitura);
+        }catch(Exception erro){
+          
+        }
+        
+    }//GEN-LAST:event_jMenuItem8ActionPerformed
+
+    private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
+        Path caminho = Paths.get("estoque.dat");
+        try {
+            byte[] lista = Files.readAllBytes(caminho);
+            String leitura = new String(lista);
+            
+            JOptionPane.showMessageDialog(null, leitura);
+        }catch(Exception erro){
+          
+        }
+    }//GEN-LAST:event_jMenuItem3ActionPerformed
 
     /**
      * @param args the command line arguments

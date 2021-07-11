@@ -27,6 +27,7 @@ public class AddProd extends javax.swing.JInternalFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jDesktopPane1 = new javax.swing.JDesktopPane();
         jPanel1 = new javax.swing.JPanel();
         jButtonPao = new javax.swing.JButton();
         jButtonBebida = new javax.swing.JButton();
@@ -35,6 +36,17 @@ public class AddProd extends javax.swing.JInternalFrame {
         jLabel1 = new javax.swing.JLabel();
 
         setClosable(true);
+
+        javax.swing.GroupLayout jDesktopPane1Layout = new javax.swing.GroupLayout(jDesktopPane1);
+        jDesktopPane1.setLayout(jDesktopPane1Layout);
+        jDesktopPane1Layout.setHorizontalGroup(
+            jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 402, Short.MAX_VALUE)
+        );
+        jDesktopPane1Layout.setVerticalGroup(
+            jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 283, Short.MAX_VALUE)
+        );
 
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Adicionar produto"));
 
@@ -50,6 +62,11 @@ public class AddProd extends javax.swing.JInternalFrame {
         jButtonSalgado.setText("Salgado");
 
         jButtonDoce.setText("Doce");
+        jButtonDoce.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonDoceActionPerformed(evt);
+            }
+        });
 
         jLabel1.setText("Qual produto deseja adicionar?");
 
@@ -60,31 +77,31 @@ public class AddProd extends javax.swing.JInternalFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(51, 51, 51)
+                        .addGap(117, 117, 117)
+                        .addComponent(jLabel1))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(44, 44, 44)
                         .addComponent(jButtonDoce)
-                        .addGap(18, 18, 18)
+                        .addGap(26, 26, 26)
                         .addComponent(jButtonBebida)
                         .addGap(18, 18, 18)
                         .addComponent(jButtonSalgado)
                         .addGap(18, 18, 18)
-                        .addComponent(jButtonPao))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(118, 118, 118)
-                        .addComponent(jLabel1)))
-                .addContainerGap(33, Short.MAX_VALUE))
+                        .addComponent(jButtonPao)))
+                .addContainerGap(40, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(82, 82, 82)
+                .addGap(66, 66, 66)
                 .addComponent(jLabel1)
-                .addGap(49, 49, 49)
+                .addGap(51, 51, 51)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButtonDoce)
                     .addComponent(jButtonBebida)
                     .addComponent(jButtonSalgado)
-                    .addComponent(jButtonDoce)
                     .addComponent(jButtonPao))
-                .addContainerGap(88, Short.MAX_VALUE))
+                .addContainerGap(106, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -92,18 +109,28 @@ public class AddProd extends javax.swing.JInternalFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addComponent(jDesktopPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addComponent(jDesktopPane1))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButtonPaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonPaoActionPerformed
-        
+  
     }//GEN-LAST:event_jButtonPaoActionPerformed
+
+    private void jButtonDoceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonDoceActionPerformed
+         new Doce().setVisible(true);
+    }//GEN-LAST:event_jButtonDoceActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -111,6 +138,7 @@ public class AddProd extends javax.swing.JInternalFrame {
     private javax.swing.JButton jButtonDoce;
     private javax.swing.JButton jButtonPao;
     private javax.swing.JButton jButtonSalgado;
+    private javax.swing.JDesktopPane jDesktopPane1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
