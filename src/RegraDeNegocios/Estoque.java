@@ -273,13 +273,61 @@ public class Estoque implements MetodosEstoque{
         switch (tipo) {
             // BEBIDAS
             case "PAO":
-                paonovo.add(new PaoGenerico(quantidade, nome, valor));             
+                paonovo.add(new PaoGenerico(quantidade, nome, valor));
+                
+                try {
+                    FileWriter fw = new FileWriter("produtos.txt",true);
+                    PrintWriter pw = new PrintWriter(fw);
+            
+                    pw.println("=====Novo pão=====");
+                    pw.println("-" + nome + ";");
+            
+                    pw.flush();
+                    pw.close();
+                    fw.close();
+                
+                } catch (IOException ex) {
+                    Logger.getLogger(Interface.DoceGenerico.class.getName()).log(Level.SEVERE, null, ex);
+                }
+                
                 break;
             case "BEBIDA":
                 bebidanovo.add(new BebidaGenerica(quantidade, nome, valor));
+                
+                try {
+                    FileWriter fw = new FileWriter("produtos.txt",true);
+                    PrintWriter pw = new PrintWriter(fw);
+            
+                    pw.println("=====Nova bebida=====");
+                    pw.println("-" + nome + ";");
+            
+                    pw.flush();
+                    pw.close();
+                    fw.close();
+                
+                } catch (IOException ex) {
+                    Logger.getLogger(Interface.DoceGenerico.class.getName()).log(Level.SEVERE, null, ex);
+                }
+                
                 break;
             case "SALGADO":
                 salgadonovo.add(new SalgadoGenerico(quantidade, nome, valor));
+                
+                try {
+                    FileWriter fw = new FileWriter("produtos.txt",true);
+                    PrintWriter pw = new PrintWriter(fw);
+            
+                    pw.println("=====Novo salgado=====");
+                    pw.println("-" + nome + ";");
+            
+                    pw.flush();
+                    pw.close();
+                    fw.close();
+                
+                } catch (IOException ex) {
+                    Logger.getLogger(Interface.DoceGenerico.class.getName()).log(Level.SEVERE, null, ex);
+                }
+                
                 break;
             case "DOCE":
                 docenovo.add(new DoceGenerico(quantidade, nome, valor));

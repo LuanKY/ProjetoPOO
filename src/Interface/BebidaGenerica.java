@@ -18,12 +18,12 @@ import javax.swing.JOptionPane;
  *
  * @author 1
  */
-public class DoceGenerico extends javax.swing.JFrame {
+public class BebidaGenerica extends javax.swing.JFrame {
 
     /**
-     * Creates new form DoceGenerico
+     * Creates new form BebidaGenerica
      */
-    public DoceGenerico() {
+    public BebidaGenerica() {
         initComponents();
     }
 
@@ -125,7 +125,7 @@ public class DoceGenerico extends javax.swing.JFrame {
         Estoque e = new Estoque();
         int quantidade = Integer.parseInt(jTextFieldqt.getText());
         float valor = Float.parseFloat(jTextFieldvl.getText());
-        JOptionPane.showMessageDialog(null, e.CadastrarProduto(quantidade, jFormattedTextFieldnm.getText(), valor, "DOCE"));
+        JOptionPane.showMessageDialog(null, e.CadastrarProduto(quantidade, jFormattedTextFieldnm.getText(), valor, "BEBIDA"));
         
         try {        
             FileWriter arq = new FileWriter("estoque.dat",true);
@@ -142,10 +142,11 @@ public class DoceGenerico extends javax.swing.JFrame {
             Logger.getLogger(Cliente.class.getName()).log(Level.SEVERE, null, ex);
         }
 
-
         jFormattedTextFieldnm.setText("");
         jTextFieldqt.setText("");
         jTextFieldvl.setText("");
+        
+        
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
@@ -165,20 +166,20 @@ public class DoceGenerico extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(DoceGenerico.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(BebidaGenerica.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(DoceGenerico.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(BebidaGenerica.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(DoceGenerico.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(BebidaGenerica.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(DoceGenerico.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(BebidaGenerica.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new DoceGenerico().setVisible(true);
+                new BebidaGenerica().setVisible(true);
             }
         });
     }

@@ -46,8 +46,18 @@ public class CadProd extends javax.swing.JInternalFrame {
         });
 
         jButtonBebida.setText("Nova bebida");
+        jButtonBebida.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonBebidaActionPerformed(evt);
+            }
+        });
 
         jButtonSalgado.setText("Novo salgado");
+        jButtonSalgado.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonSalgadoActionPerformed(evt);
+            }
+        });
 
         jButtonDoce.setText("Novo doce");
         jButtonDoce.addActionListener(new java.awt.event.ActionListener() {
@@ -109,12 +119,20 @@ public class CadProd extends javax.swing.JInternalFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButtonPaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonPaoActionPerformed
-
+        new PaoGenerico().setVisible(true);
     }//GEN-LAST:event_jButtonPaoActionPerformed
 
     private void jButtonDoceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonDoceActionPerformed
         new DoceGenerico().setVisible(true);
     }//GEN-LAST:event_jButtonDoceActionPerformed
+
+    private void jButtonBebidaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonBebidaActionPerformed
+        new BebidaGenerica().setVisible(true);
+    }//GEN-LAST:event_jButtonBebidaActionPerformed
+
+    private void jButtonSalgadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSalgadoActionPerformed
+        new SalgadoGenerico().setVisible(true);
+    }//GEN-LAST:event_jButtonSalgadoActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
