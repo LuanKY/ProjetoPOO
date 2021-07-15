@@ -6,16 +6,16 @@
 -Pão jaco;
 =====Bebidas=====
 -Coca cola;
--Fanta laranja;
 -Sprite;
+-Fanta laranja;
 -Suco de goiaba;
 -Suco de laranja;
 =====Salgados=====
 -Coxinha de frango;
 -Empada de frango;
 -Kibe;
--Pastel de queijo;
 -Pão de queijo;
+-Pastel de queijo;
 =====Doces=====
 -Tartilete;
 -Beijinho;

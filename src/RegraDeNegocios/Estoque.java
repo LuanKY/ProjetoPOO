@@ -1,5 +1,9 @@
 package RegraDeNegocios;
 
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -560,5 +564,62 @@ public class Estoque implements MetodosEstoque{
     @Override
     public List ListarVendas() {
         return vendas;
+    }
+    
+    public String excProd(String nome){
+        
+        File arq = new File("produtos.txt");
+        
+        try{
+           FileReader fr = new FileReader(arq);
+           BufferedReader br = new BufferedReader(fr);
+           
+           String linhaCadastro = br.readLine();
+           ArrayList<String> salvar = new ArrayList();
+           
+           while(linhaCadastro != null){
+               if(linhaCadastro.equals("-" + nome + ";") == false){
+                   salvar.add(linhaCadastro);
+               }
+               linhaCadastro = br.readLine();
+           }
+           
+           fr.close();
+           br.close();
+           
+           FileWriter fw2 = new FileWriter(arq, true);
+           fw2.close();
+        
+           FileWriter fw = new FileWriter(arq);
+           BufferedWriter bw = new BufferedWriter(fw);
+           
+           for(int i = 0; i < salvar.size(); i++){
+               bw.write(salvar.get(i));
+               bw.newLine();
+           }
+           
+           bw.close();
+           fw.close();
+           
+           
+        }catch(IOException ex){
+            
+        }
+     
+        try {        
+            FileWriter exl = new FileWriter("excProd.txt",true);
+            PrintWriter pArq = new PrintWriter(exl);
+            
+            pArq.println("-" + nome + ";");
+     
+            pArq.flush();
+            pArq.close();
+            exl.close();
+            
+        } catch (IOException ex) {
+            Logger.getLogger(Cliente.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        return "Produto excluido com sucesso!";
     }
 }
