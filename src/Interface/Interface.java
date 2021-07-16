@@ -12,6 +12,7 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
 /**
@@ -53,6 +54,7 @@ public class Interface extends javax.swing.JFrame {
         jMenu4 = new javax.swing.JMenu();
         jMenuItem12 = new javax.swing.JMenuItem();
         jMenuItem13 = new javax.swing.JMenuItem();
+        jMenuItem6 = new javax.swing.JMenuItem();
         jMenu3 = new javax.swing.JMenu();
         jMenuItem5 = new javax.swing.JMenuItem();
 
@@ -72,6 +74,7 @@ public class Interface extends javax.swing.JFrame {
         jMenu1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/box.png"))); // NOI18N
         jMenu1.setText("Estoque");
 
+        jMenuItem10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/estoque (1).png"))); // NOI18N
         jMenuItem10.setText("Adicionar produto");
         jMenuItem10.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -80,6 +83,7 @@ public class Interface extends javax.swing.JFrame {
         });
         jMenu1.add(jMenuItem10);
 
+        jMenuItem3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/estoque.png"))); // NOI18N
         jMenuItem3.setText("Visualizar estoque");
         jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -88,6 +92,7 @@ public class Interface extends javax.swing.JFrame {
         });
         jMenu1.add(jMenuItem3);
 
+        jMenuItemCadastrarP.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/caixas (1).png"))); // NOI18N
         jMenuItemCadastrarP.setText("Cadastrar produto");
         jMenuItemCadastrarP.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -96,6 +101,7 @@ public class Interface extends javax.swing.JFrame {
         });
         jMenu1.add(jMenuItemCadastrarP);
 
+        jMenuItem7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/cancelar.png"))); // NOI18N
         jMenuItem7.setText("Excluir produto");
         jMenuItem7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -104,6 +110,7 @@ public class Interface extends javax.swing.JFrame {
         });
         jMenu1.add(jMenuItem7);
 
+        jMenuItem8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/caixas.png"))); // NOI18N
         jMenuItem8.setText("Produtos cadastrados");
         jMenuItem8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -112,6 +119,7 @@ public class Interface extends javax.swing.JFrame {
         });
         jMenu1.add(jMenuItem8);
 
+        jMenuItem9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/cancelar.png"))); // NOI18N
         jMenuItem9.setText("Produtos excluidos/fora do estoque");
         jMenuItem9.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -182,7 +190,21 @@ public class Interface extends javax.swing.JFrame {
 
         jMenuItem13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/basket_edit.png"))); // NOI18N
         jMenuItem13.setText("Vendas");
+        jMenuItem13.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem13ActionPerformed(evt);
+            }
+        });
         jMenu4.add(jMenuItem13);
+
+        jMenuItem6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/caixa-registradora.png"))); // NOI18N
+        jMenuItem6.setText("Caixa");
+        jMenuItem6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem6ActionPerformed(evt);
+            }
+        });
+        jMenu4.add(jMenuItem6);
 
         jMenuBar1.add(jMenu4);
 
@@ -230,11 +252,13 @@ public class Interface extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem2ActionPerformed
 
     private void jMenuItem5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem5ActionPerformed
-        // TODO add your handling code here:
+        new Sair().setVisible(true);
     }//GEN-LAST:event_jMenuItem5ActionPerformed
 
     private void jMenuItem12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem12ActionPerformed
-        // TODO add your handling code here:
+        Vender tela = new Vender();
+        jDesktopPane1.add(tela);
+        tela.setVisible(true);
     }//GEN-LAST:event_jMenuItem12ActionPerformed
 
     private void jMenu2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu2ActionPerformed
@@ -308,6 +332,32 @@ public class Interface extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jMenuItem9ActionPerformed
 
+    private void jMenuItem13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem13ActionPerformed
+        
+        Path caminho = Paths.get("vendas.txt");
+        try {
+            byte[] lista = Files.readAllBytes(caminho);
+            String leitura = new String(lista);
+
+            JOptionPane.showMessageDialog(null, leitura);
+        }catch(Exception erro){
+
+        }
+    }//GEN-LAST:event_jMenuItem13ActionPerformed
+
+    private void jMenuItem6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem6ActionPerformed
+        
+        Path caminho = Paths.get("caixa.txt");
+        try {
+            byte[] lista = Files.readAllBytes(caminho);
+            String leitura = new String(lista);
+
+            JOptionPane.showMessageDialog(null, leitura);
+        }catch(Exception erro){
+
+        }
+    }//GEN-LAST:event_jMenuItem6ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -358,6 +408,7 @@ public class Interface extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JMenuItem jMenuItem4;
     private javax.swing.JMenuItem jMenuItem5;
+    private javax.swing.JMenuItem jMenuItem6;
     private javax.swing.JMenuItem jMenuItem7;
     private javax.swing.JMenuItem jMenuItem8;
     private javax.swing.JMenuItem jMenuItem9;

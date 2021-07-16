@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JInternalFrameFormInfo">
+  <Properties>
+    <Property name="closable" type="boolean" value="true"/>
+  </Properties>
+  <SyntheticProperties>
+    <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
+  </SyntheticProperties>
+  <AuxValues>
+    <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_generateFQN" type="java.lang.Boolean" value="true"/>
+    <AuxValue name="FormSettings_generateMnemonicsCode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_i18nAutoMode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_layoutCodeTarget" type="java.lang.Integer" value="1"/>
+    <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
+  </AuxValues>
+
+  <Layout>
+    <DimensionLayout dim="0">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Component id="jPanel1" alignment="0" max="32767" attributes="0"/>
+      </Group>
+    </DimensionLayout>
+    <DimensionLayout dim="1">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Component id="jPanel1" alignment="0" max="32767" attributes="0"/>
+      </Group>
+    </DimensionLayout>
+  </Layout>
+  <SubComponents>
+    <Container class="javax.swing.JPanel" name="jPanel1">
+      <Properties>
+        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+          <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
+            <TitledBorder title="Vender produto"/>
+          </Border>
+        </Property>
+      </Properties>
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="82" max="-2" attributes="0"/>
+                          <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="82" max="-2" attributes="0"/>
+                          <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="32767" attributes="0"/>
+                          <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="96" max="-2" attributes="0"/>
+                          <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Component id="sonhogoiaba" alignment="0" max="32767" attributes="0"/>
+                              <Component id="jButtonDoce" alignment="0" max="32767" attributes="0"/>
+                              <Component id="bei" alignment="0" max="32767" attributes="0"/>
+                              <Component id="tar" alignment="0" max="32767" attributes="0"/>
+                              <Component id="bri" alignment="0" max="32767" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Component id="sucoL" alignment="0" pref="115" max="32767" attributes="0"/>
+                              <Component id="SucoG" alignment="0" max="32767" attributes="0"/>
+                              <Component id="fanta" alignment="0" max="32767" attributes="0"/>
+                              <Component id="coca" alignment="0" max="32767" attributes="0"/>
+                              <Component id="sprite" alignment="0" max="32767" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Component id="emp" alignment="0" max="32767" attributes="0"/>
+                              <Component id="cox" alignment="0" max="32767" attributes="0"/>
+                              <Component id="pastel" alignment="0" max="32767" attributes="0"/>
+                              <Component id="kibe" alignment="0" max="32767" attributes="0"/>
+                              <Component id="paodqj" alignment="0" max="32767" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="forma" alignment="0" max="32767" attributes="0"/>
+                              <Component id="carte" alignment="1" max="32767" attributes="0"/>
+                              <Component id="pcocada" alignment="1" max="32767" attributes="0"/>
+                              <Component id="jac" alignment="0" max="32767" attributes="0"/>
+                              <Component id="cil" alignment="0" max="32767" attributes="0"/>
+                          </Group>
+                      </Group>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+              </Group>
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace min="-2" pref="205" max="-2" attributes="0"/>
+                  <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
+                  <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabel5" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="jButtonDoce" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="sprite" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="kibe" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jac" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <Component id="coca" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="fanta" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="sucoL" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <Component id="cil" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="pcocada" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="carte" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <Component id="paodqj" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="pastel" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="emp" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <Component id="bei" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="tar" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="bri" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="sonhogoiaba" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="SucoG" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="cox" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="forma" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                  </Group>
+                  <EmptySpace pref="44" max="32767" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Component class="javax.swing.JButton" name="cil">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Pao cilindro"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cilActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="sprite">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Sprite"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="spriteActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="kibe">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Kibe"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="kibeActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="jButtonDoce">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Cocada"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonDoceActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabel1">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Escolha o produto?"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="jac">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Pao jaco"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jacActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="pcocada">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Pao cocada"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="pcocadaActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="forma">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Pao de forma"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="formaActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="carte">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Pao carteira"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="carteActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabel2">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="P&#xe3;es"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="paodqj">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Pao de queijo"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="paodqjActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="pastel">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Pastel de queijo"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="pastelActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="emp">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Empada de frango"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="empActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="cox">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Coxinha de frango"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="coxActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="coca">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Coca cola"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cocaActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="fanta">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Fanta laranja"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="fantaActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="sucoL">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Suco de laranja"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="sucoLActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="SucoG">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Suco de goiaba"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="SucoGActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="bei">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Beijinho"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="beiActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="tar">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Tartilete"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tarActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="bri">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Brigadeiro"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="briActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="sonhogoiaba">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Sonho de goiaba"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="sonhogoiabaActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabel3">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Doces"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabel4">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Bebidas"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabel5">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Salgados"/>
+          </Properties>
+        </Component>
+      </SubComponents>
+    </Container>
+  </SubComponents>
+</Form>

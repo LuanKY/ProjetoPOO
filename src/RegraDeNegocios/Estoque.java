@@ -622,4 +622,51 @@ public class Estoque implements MetodosEstoque{
         
         return "Produto excluido com sucesso!";
     }
+    
+    public String vender(String nome, int quantidade, float pago, float troco, float cx){
+        
+        try {
+                    FileWriter fw = new FileWriter("vendas.txt",true);
+                    PrintWriter pw = new PrintWriter(fw);
+            
+                    pw.println("-" + nome + " ->Quantidade: " + quantidade + " ->Valor pago pelo cliente: " + pago);
+            
+                    pw.flush();
+                    pw.close();
+                    fw.close();
+                
+                } catch (IOException ex) {
+                    Logger.getLogger(Interface.DoceGenerico.class.getName()).log(Level.SEVERE, null, ex);
+                }
+        
+        File arq = new File("caixa.txt");
+        
+        try{
+           FileReader fr = new FileReader(arq);
+           BufferedReader br = new BufferedReader(fr);
+           
+           String linhaCaixa = br.readLine();
+           float caixa = Float.parseFloat(linhaCaixa) + cx;
+           
+           
+           fr.close();
+           br.close();
+        
+           FileWriter fw = new FileWriter(arq);
+           PrintWriter bw = new PrintWriter(fw);
+           
+           bw.println(caixa);
+           
+           bw.close();
+           fw.close();
+           
+           
+        }catch(IOException ex){
+            
+        }
+        
+        return "Seu troco é de: " + troco;
+    }
+    
+    
 }
